@@ -22,120 +22,89 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <a href="../index.html" style="margin: 15px;">
+              <img class="img" width="40" height="40" style="margin-right: 100px;" 
+                    src="../images/miedit.png" alt="gmail--v1" />
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link active" aria-current="page" href="../index.html">Incio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/acerca.html">Acerca de</a>
+                <a class="nav-link active" aria-current="page" href="../pages/acerca.html">Acerca de</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/preguntas.html">Preguntas</a>
+                <a class="nav-link active" aria-current="page" href="../pages/preguntas.html">Preguntas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/tienda.html">Tienda</a>
+                <a class="nav-link active" aria-current="page" href="../pages/tienda.html">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/testimonios.html">Testimonios</a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Mas opciones
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mas
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="../pages/testimonios.html"
-                      >Testimonios</a
-                    >
-                  </li>
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
+                  <li><a class="dropdown-item" href="#">Conoce tu presupuesto</a></li>
+                  <li><a class="dropdown-item" href="#">Quieres tu Pagina?</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Tu colaboracion</a></li>
                 </ul>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Busca aqui tu curso"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
+              <input class="form-control me-2" type="search" placeholder="Buscar Curso" aria-label="Buscar Curso">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
           </div>
         </div>
       </nav>
     </header>
-
-    <main class="main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img
-              class="img-acerca"
-              src="../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp"
-              alt="Imagen de la página de acerca de"
-            />
-          </div>
-          <div class="col-md-6">
-            <h2>Acerca de nosotros</h2>
-            <p class="p-acerca">
-              The Learning Revolution es una empresa que ofrece cursos digitales
-              en una variedad de temas. Nuestra misión es ayudar a las personas
-              a aprender y crecer, independientemente de su ubicación o
-              situación.
-            </p>
-            <p class="p-acerca">
-              Fundada en 2023, The Learning Revolution se ha convertido
-              rápidamente en uno de los principales proveedores de cursos
-              digitales en el mundo. Nuestros cursos están diseñados para ser
-              accesibles y atractivos, y nuestros profesores son expertos en sus
-              campos.
-            </p>
-            <p class="p-acerca">
-              Si está buscando una manera de aprender nuevas habilidades o
-              mejorar su educación, The Learning Revolution es la opción
-              perfecta para usted.
-            </p>
-            <p class="p-acerca">
-              En The Learning Revolution, creemos que el aprendizaje debe ser
-              accesible para todos. Por eso, nuestros cursos están disponibles
-              en una variedad de formatos, incluyendo video, audio y texto.
-            </p>
-          </div>
+     
+    <main class="main-acerca">
+      <div class="cover-container">
+        <div class="div-img">
+          <img class="img-acerca" src="../images/miedit.png" alt="Imagen de la página de acerca de"/>
         </div>
-      </div>
+        <div class="cover-text">
+          <h1 class="h1-acerca">Acerca de nosotros</h1>
+          <p class="p-acerca">
+            <strong>The Learning Revolution</strong> es una empresa que ofrece <strong>cursos digitales</strong>
+            en una variedad de temas. Nuestra misión es ayudar a las personas
+            a aprender y crecer, independientemente de su ubicación o
+            situación.
+          </p>
+          <p class="p-acerca">
+            <strong>Fundada en 2023</strong> , The Learning Revolution se ha convertido
+            rápidamente en uno de los principales proveedores de cursos
+            digitales en el mundo. <strong>Nuestros cursos están diseñados</strong> para ser
+            accesibles y atractivos, y nuestros profesores son expertos en sus
+            campos.
+          </p>
+          <p class="p-acerca">
+            Si está buscando una manera de aprender nuevas habilidades o
+            mejorar su educación, The Learning Revolution es la <strong> opción
+              perfecta</strong> para usted.
+          </p>
+          <p class="p-acerca">
+            En The Learning Revolution, creemos que el aprendizaje debe ser
+            <strong>accesible</strong> para todos. Por eso, nuestros cursos están disponibles
+            en una <strong>variedad de formatos</strong>, incluyendo video, audio y texto.
+          </p>
+        </div>
+    </div>
     </main>
+
 
     <footer class="footer">
       <div class="container">
-        <div class="row">
+        <div class="row-footer">
           <p class="footer-title">The Learning Revolution</p>
           <p class="footer-description">
             The Learning Revolution es una empresa de educación que ofrece
@@ -143,41 +112,18 @@
             ayudar a las personas a aprender y crecer, independientemente de su
             ubicación o situación.
           </p>
-          <div class="col-md-6">
-            <ul class="list-inline footer-social">
-              <li class="list-inline-item">
-                <a
-                  href="https://www.instagram.com/thelearningrevolution"
-                  target="_blank"
-                  ><img
-                    width="48"
-                    height="48"
-                    src="https://img.icons8.com/fluency/48/instagram-new.png"
-                    alt="instagram-new"
-                /></a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  href="https://www.facebook.com/TheLearningRevolution"
-                  target="_blank"
-                  ><img
-                    width="48"
-                    height="48"
-                    src="https://img.icons8.com/color/48/facebook.png"
-                    alt="facebook"
-                /></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="mailto:info@thelearningrevolution.com"
-                  ><img
-                    width="48"
-                    height="48"
-                    src="https://img.icons8.com/color/48/gmail--v1.png"
-                    alt="gmail--v1"
-                /></a>
-              </li>
-            </ul>
-          </div>
+          <div >
+            <div>
+              <ul class="list-inline footer-social">
+                <li class="list-inline-item"><a href="https://www.instagram.com/thelearningrevolution" target="_blank"><img class="img"
+                      width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png"
+                      alt="instagram-new" /></a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img class="img"
+                      width="48" height="48" src="https://img.icons8.com/color/48/facebook.png" alt="facebook" /></a></li>
+                <li class="list-inline-item"><a href="mailto:info@thelearningrevolution.com"><img class="img" width="48" height="48"
+                      src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a></li>
+              </ul>
+            </div>
         </div>
         <div class="row">
           <div class="col-12">
