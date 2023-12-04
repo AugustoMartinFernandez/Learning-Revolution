@@ -1,73 +1,140 @@
-// Variables
-const cursosDisponibles = [
-  "programacion",
-  "diseno web",
-  "marketing digital",
-  "ciberseguridad",
-  "desarrollo web",
-  "javascript",
-  "biologo",
-];
-const precios = {
-  "programacion": 1000,
-  "diseño web": 1500,
-  "marketing digital": 2000,
-  "ciberseguridad": 3000,
-  "javascript": 3800,
+// // SIMULADOR DE CURSOS 
+// // Base de datos de cursos
+// const cursosDisponibles = {
+//   1: { nombre: "Programación", disponible: true, precio: "$100" },
+//   2: { nombre: "Diseño Web", disponible: false },
+//   // Agrega más cursos según sea necesario
+// };
+
+// // Función para preguntar y validar el nombre del usuario
+// function pedirNombre() {
+//   let nombreUsuario = prompt("Hola, por favor ingresa tu nombre");
+//   while (!nombreUsuario) {
+//     nombreUsuario = prompt("Por favor, ingresa un nombre válido.");
+//   }
+//   return nombreUsuario;
+// }
+
+// // Función para mostrar los cursos y solicitar la selección del usuario
+// function seleccionarCurso() {
+//   let opcion = prompt(
+//     "Elige un curso:\n1. Programación\n2. Diseño Web\n"
+//   ).toLowerCase();
+//   opcion = parseInt(opcion);
+
+//   while (isNaN(opcion) || opcion < 1 || opcion > 2) {
+//     opcion = prompt(
+//       "Por favor, selecciona una opción válida:\n1. Programación\n2. Diseño Web\n"
+//     ).toLowerCase();
+//     opcion = parseInt(opcion);
+//   }
+
+//   return opcion;
+// }
+
+// // Función principal
+// function main() {
+//   const nombreUsuario = pedirNombre();
+//   alert(
+//     "Hola " +
+//       nombreUsuario +
+//       " Bienvenido al Simulador de Cursos de The Learning Revolution."
+//   );
+
+//   let deseaOtroCurso;
+
+//   do {
+//     const opcionCurso = seleccionarCurso();
+//     const cursoElegido = cursosDisponibles[opcionCurso];
+
+//     if (cursoElegido) {
+//       if (cursoElegido.disponible) {
+//         alert(
+//           'El curso de ${cursoElegido.nombre} está disponible.\nPrecio: ${cursoElegido.precio}'
+//         );
+//       } else {
+//         alert(
+//           'Lo siento, el curso de ${cursoElegido.nombre} no está disponible en este momento.'
+//         );
+//       }
+//     } else {
+//       alert("Opción no válida. Por favor, vuelve a intentarlo.");
+//     }
+
+//     deseaOtroCurso = confirm("¿Quieres elegir otro curso?");
+//   } while (deseaOtroCurso);
+
+//   alert(
+//     "Gracias " +
+//       nombreUsuario +
+//       " por usar el Simulador de Cursos de The Learning Revolution. ¡Hasta luego!👋"
+//   );
+// }
+
+// // Ejecutar la función principal cuando se carga la página
+// main();
+
+// SIMULADOR DE CURSOS
+// Base de datos de cursos
+const cursosDisponibles = {
+  1: { nombre: "Programación", disponible: true, precio: "$1500 ARS" },
+  2: { nombre: "Diseño Web", disponible: true, precio: "$2500 ARS" },
+  // Agrega más cursos según sea necesario
 };
+
+// Función para preguntar y validar el nombre del usuario
+function pedirNombre() {
+  let nombreUsuario = prompt("Hola, por favor ingresa tu nombre");
+  while (!nombreUsuario) {
+    nombreUsuario = prompt("Por favor, ingresa un nombre válido.");
+  }
+  return nombreUsuario;
+}
+
+// Función para mostrar los cursos y solicitar la selección del usuario
+function seleccionarCurso() {
+  let opcion = prompt(
+    "Elige un curso:\n1. Programación\n2. Diseño Web\n"
+  ).toLowerCase();
+  opcion = parseInt(opcion);
+
+  while (isNaN(opcion) || opcion < 1 || opcion > 2) {
+    opcion = prompt(
+      "Por favor, selecciona una opción válida:\n1. Programación\n2. Diseño Web\n"
+    ).toLowerCase();
+    opcion = parseInt(opcion);
+  }
+
+  return opcion;
+}
 
 // Función principal
 function main() {
-  // solicito el nombre al usuario
-  const nombre = prompt("Ingresa tu nombre: ");
+  const nombreUsuario = pedirNombre();
+  alert(`Hola ${nombreUsuario}, bienvenido al Simulador de Cursos de The Learning Revolution.`);
 
-  // Obtengo el curso que el usuario está buscando
-  const curso = prompt("Ingresa el curso que estás buscando: ").toLowerCase();
+  let deseaOtroCurso;
 
-  // Verifico la disponibilidad del curso
-  const disponible = cursosDisponibles.includes(curso);
+  do {
+    const opcionCurso = seleccionarCurso();
+    const cursoElegido = cursosDisponibles[opcionCurso];
 
-  // Muestro el mensaje al usuario
-  if (disponible) {
-    alert(
-      "Hola " +
-        nombre +
-        ", como estas? te comento que afortunadamente el curso de " +
-        curso +
-        " está disponible!"
-    );
-
-    // Pregunto si el usuario quiere conocer el precio
-    const quierePrecio = prompt(
-      "¿Quieres conocer el precio del curso? (Si/No)"
-    ).toLowerCase();
-
-    // Si el usuario quiere conocer el precio, mostramos el precio
-    if (quierePrecio === "Si".toLowerCase()) {
-      // Obtengo el precio del curso
-      const precio = precios[curso];
-
-      // Verifico si el precio existe antes de mostrarlo
-      if (precio !== undefined) {
-        alert("El precio del curso de " + curso + " cuesta " + precio + " ARS");
+    if (cursoElegido) {
+      if (cursoElegido.disponible) {
+        alert(`El curso de ${cursoElegido.nombre} está disponible.\nPrecio: ${cursoElegido.precio}`);
       } else {
-        alert(
-          "Lo siento " +
-            nombre +
-            " lamentablemente por ahora no se encuentra disponible el precio para el curso de " +
-            curso
-        );
+        alert(`Lo siento, el curso de ${cursoElegido.nombre} no está disponible en este momento.`);
       }
+    } else {
+      alert("Opción no válida. Por favor, vuelve a intentarlo.");
     }
-  } else {
-    alert(
-      "Hola " +
-        nombre +
-        ", lamentablemente aun no se encuentra disponible el curso de " +
-        curso +
-        "!"
-    );
-  }
+
+    deseaOtroCurso = confirm("¿Quieres elegir otro curso?");
+  } while (deseaOtroCurso);
+
+  alert(`Gracias ${nombreUsuario} por usar el Simulador de Cursos de The Learning Revolution. ¡Hasta luego! 👋`);
 }
-// Llamo a la función principal
+
+// Ejecutar la función principal cuando se carga la página
 main();
+
