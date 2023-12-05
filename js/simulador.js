@@ -1,4 +1,3 @@
-
 // SIMULADOR DE CURSOS
 // Base de datos de cursos
 const cursosDisponibles = {
@@ -36,7 +35,9 @@ function seleccionarCurso() {
 // Función principal
 function main() {
   const nombreUsuario = pedirNombre();
-  alert(`Hola ${nombreUsuario}, bienvenido al Simulador de Cursos de The Learning Revolution.`);
+  alert(
+    `Hola ${nombreUsuario}, bienvenido al Simulador de Cursos de The Learning Revolution.`
+  );
 
   let deseaOtroCurso;
 
@@ -46,9 +47,13 @@ function main() {
 
     if (cursoElegido) {
       if (cursoElegido.disponible) {
-        alert(`El curso de ${cursoElegido.nombre} está disponible.\nPrecio: ${cursoElegido.precio}`);
+        alert(
+          `El curso de ${cursoElegido.nombre} está disponible.\nPrecio: ${cursoElegido.precio}`
+        );
       } else {
-        alert(`Lo siento, el curso de ${cursoElegido.nombre} no está disponible en este momento.`);
+        alert(
+          `Lo siento, el curso de ${cursoElegido.nombre} no está disponible en este momento.`
+        );
       }
     } else {
       alert("Opción no válida. Por favor, vuelve a intentarlo.");
@@ -57,9 +62,10 @@ function main() {
     deseaOtroCurso = confirm("¿Quieres elegir otro curso?");
   } while (deseaOtroCurso);
 
-  alert(`Gracias ${nombreUsuario} por usar el Simulador de Cursos de The Learning Revolution. ¡Hasta luego! 👋`);
+  alert(
+    `Gracias ${nombreUsuario} por usar el Simulador de Cursos de The Learning Revolution. ¡Hasta luego! 👋`
+  );
 }
 
 // Ejecutar la función principal cuando se carga la página
 main();
-
