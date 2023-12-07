@@ -145,7 +145,6 @@ button:not(:disabled) {
   width: 40%;
   margin: 20px;
   margin-bottom: 0;
-
 }
 .div-img {
   display: flex;
@@ -155,8 +154,6 @@ button:not(:disabled) {
   background-image: url(https://i.gifer.com/PDA.gif);
   background-attachment: fixed;
   background-size: cover;
- 
-
 }
 .cover-text {
   margin: 20px;
@@ -191,7 +188,7 @@ svg {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  outline: 2px solid #f5f5f5; 
+  outline: 2px solid #f5f5f5;
   transition: outline-color 0.5s ease;
 }
 .img:hover,
@@ -203,26 +200,52 @@ svg:hover {
 .Container-- {
   margin: 20px;
 }
-.p-preg{
+.p-preg {
   margin-bottom: 25px;
 }
-.h1-preg{
+.h1-preg {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 50px;
   font-weight: 800;
 }
-.container-preg{
+.container-preg {
   margin-bottom: 100px;
 }
-.main-preg{
+.main-preg {
   min-height: 100vh;
 }
 
-
-.p-tienda{
+.p-tienda {
   margin-top: 30px;
 }
-.div-tienda{
+.div-tienda {
   margin: 20px;
 }
+/* TIENDA */
+
+.img-tienda {
+  width: auto;
+}
+.card {
+  width: 300px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+}
+.card-image {
+  background: linear-gradient(to right, #23074d77, #cc543393),
+    url(https://i.gifer.com/3SBP.gif);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.section-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
