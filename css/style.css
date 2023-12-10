@@ -243,3 +243,6 @@ svg:hover {
   justify-content: center;
   margin-bottom: 50px;
 }
+.title.is-4{
+  font-size: 1.4rem !important;
+}
