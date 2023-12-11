@@ -8,7 +8,7 @@
 body {
   font-family: "Bungee Spice", sans-serif;
   font-family: "Merriweather", serif;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 /* Img de portada */
@@ -41,7 +41,17 @@ body {
 .p {
   margin-top: 30px;
 }
-
+/* Nav */
+.bg-body-tertiary {
+  background-color: #0b0404 !important;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #f3f3f3;
+}
+.nav-link {
+  color: #f3f3f3;
+}
 /* .bg-body-tertiary {
   background-color: rgba(0, 0, 0, 0.913) !important;
   height: 70px;
@@ -243,6 +253,25 @@ svg:hover {
   justify-content: center;
   margin-bottom: 50px;
 }
-.title.is-4{
+.title.is-4 {
   font-size: 1.4rem !important;
+}
+.pp-tienda {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.subtitle.is-6 {
+  font-size: 0.7rem;
+}
+.card-content {
+  padding: 1rem;
+}
+.navbar-toggler {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #0b0404;
+  border-color: #d0d00d;
+}
+.navbar-toggler-icon {
+  background-image: url(" https://img.icons8.com/3d-fluency/94/menu.png ");
 }
