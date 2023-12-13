@@ -13,10 +13,6 @@ body {
 
 /* Img de portada */
 .img-portada {
-  overflow: hidden;
-  background: #bc4e9c;
-  background: -webkit-linear-gradient(to right, #11998e6c, #38ef7e5d),
-    url(../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp);
   background: linear-gradient(to right, #11998e65, #38ef7e62),
     url(../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp);
   background-attachment: fixed;
@@ -56,7 +52,6 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   background-color: #0b0404;
-  border-color: #d0d00d;
 }
 .navbar-toggler-icon {
   background-image: url(" https://img.icons8.com/3d-fluency/94/menu.png ");
@@ -136,9 +131,10 @@ svg:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: url(https://i.gifer.com/PDA.gif);
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
+  width: 100%;
+  height: 60vh;
 }
 .cover-text {
   margin: 20px;
@@ -246,13 +242,7 @@ strong {
   background-color: white;
   box-shadow: rgba(10, 13, 17, 0.724) 0px 0px 0px 2px;
 }
-.client-name {
-  font-style: italic;
-  color: #000;
-}
-.p-testimonios {
-  color: #f3f3f3;
-}
+
 .botones {
   display: flex;
   justify-content: center;
@@ -277,21 +267,17 @@ strong {
 
 /* SECCION CARRUSEL DE PAGINA DE INICIO */
 /* Añade estos estilos al final del archivo styles.css o en un nuevo archivo específico para el carrusel */
-
 .courses {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
 }
-.course-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+
 .course {
-  width: 100%; /* Ahora ocupa el 100% del contenedor */
-  max-width: 300px; /* Ancho máximo para evitar que las tarjetas sean demasiado grandes */
+  width: 100%;
+  max-width: 300px;
   position: relative;
-  margin-right: 10px; /* Espacio entre tarjetas */
+  margin-right: 10px;
 }
 .course img {
   width: 100%;
@@ -323,16 +309,65 @@ strong {
   background-color: black;
   color: #fff;
 }
-.button.is-primary.is-outlined{
+.button.is-primary.is-outlined {
   margin: 5px;
 }
-.button.is-link.is-outlined{
+.button.is-link.is-outlined {
   margin: 5px;
 }
-.h2-ini{
+.h2-ini {
   font-size: 1.3em;
-    font-weight: bold;
-    margin: 20px;
-    text-align: center;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
 }
 
+    /* Estilos para la sección de testimonios */
+    .custom-testimonial-card {
+      background-color: #d2d4d6;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .custom-testimonial-img {
+      border-radius: 50%;
+      background-color: white;
+      max-width: 100px;
+      margin-bottom: 15px;
+      box-shadow: rgba(190, 210, 4, 0.4) 0px 5px, rgba(179, 182, 7, 0.3) 0px 10px, rgba(166, 184, 3, 0.2) 0px 15px, rgba(171, 197, 4, 0.1) 0px 20px, rgba(185, 209, 10, 0.05) 0px 25px;
+    }
+
+    .custom-testimonial-quote {
+      font-style: italic;
+      color: black;
+    }
+
+    .custom-client-name {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #495057;
+    }
+    .custom-testimonials{
+      margin-top: 50px;
+      margin-bottom: 100px;
+      background-image: url(https://i.gifer.com/6ob.gif);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .video-test{
+      width:100%;
+      box-shadow: rgba(169, 172, 7, 0.646) 0px 40px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(15, 52, 67) 0px -3px 5px;
+      border-radius: 5px;
+    }
+    .content{
+      padding: 10px;
+    }
+      .figure {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
