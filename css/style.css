@@ -55,11 +55,11 @@ body {
 .navbar-toggler {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  background-color: #0b0404;
+ 
 }
 
 .navbar-toggler-icon {
-  background-image: url(" https://img.icons8.com/3d-fluency/94/menu.png ");
+  background-image: url("https://img.icons8.com/ios-filled/50/FFFFFF/user-menu-male.png");
 }
 
 /* FOOTER */
@@ -374,7 +374,9 @@ strong {
   background-color: white;
   max-width: 100px;
   margin-bottom: 15px;
-  box-shadow: rgba(190, 210, 4, 0.4) 0px 5px, rgba(179, 182, 7, 0.3) 0px 10px, rgba(166, 184, 3, 0.2) 0px 15px, rgba(171, 197, 4, 0.1) 0px 20px, rgba(185, 209, 10, 0.05) 0px 25px;
+  box-shadow: rgba(190, 210, 4, 0.4) 0px 5px, rgba(179, 182, 7, 0.3) 0px 10px,
+    rgba(166, 184, 3, 0.2) 0px 15px, rgba(171, 197, 4, 0.1) 0px 20px,
+    rgba(185, 209, 10, 0.05) 0px 25px;
 }
 
 .custom-testimonial-quote {
@@ -398,7 +400,9 @@ strong {
 
 .video-test {
   width: 100%;
-  box-shadow: rgba(169, 172, 7, 0.646) 0px 40px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(15, 52, 67) 0px -3px 5px;
+  box-shadow: rgba(169, 172, 7, 0.646) 0px 40px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(15, 52, 67) 0px -3px 5px;
   border-radius: 5px;
 }
 
@@ -411,4 +415,116 @@ strong {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+
+
+/* ESTILOS DE ANUNCIO HORIZONTAL */
+.contenedor-anuncio{
+  background-image: url(https://i.gifer.com/EXAe.gif);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 25px;
+  overflow: hidden;
+}
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(650%);
+  }
+}
+#anuncio {
+  text-align: center;
+  position: absolute;
+  white-space: nowrap;
+  animation: desplazamiento 25s linear infinite;
+  font-size: 15px;
+  color: wheat;
+}
+@media screen and (max-width: 768px) {
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(330%);
+    }
+  }
+  #anuncio {
+    position: absolute;
+    white-space: nowrap;
+    animation: desplazamiento 20s linear infinite;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(220%);
+    }
+  }
+  #anuncio {
+    position: absolute;
+    white-space: nowrap;
+    animation: desplazamiento 20s linear infinite;
+    font-size: 15px;
+  }
+}
+
+#mensaje {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#contador-regresivo {
+  padding: 30px;
+  text-align: center;
+  background-image: url(https://i.gifer.com/4XCO.gif);
+  background-attachment: initial;
+  background-size: cover;
+  overflow: hidden;
+  height: 60vh;
+  margin-bottom: 50px;
+}
+.conte-regre{
+  background-image: url(https://i.gifer.com/2iiB.gif);
+  background-attachment: local;
+  background-size: cover;
+  margin-top: 40px;
+}
+
+
+#contador-regresivo h1 {
+  font-size: 3rem;
+  color: green; /* Rojo navideño */
+}
+
+#contador-regresivo p {
+  font-size: 2rem;
+  color: blue;
+}
+
+#cuenta-regresiva {
+  font-size: 2.1rem;
+  color: red; /* Azul oscuro moderno */
+  font-weight: bold;
+}
+
+.hero {
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
