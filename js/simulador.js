@@ -68,7 +68,7 @@ function calcularPrecioConDescuento(precio, porcentajeDescuento) {
 function main() {
   const nombreUsuario = pedirNombre();
   alert(
-    `Hola ${nombreUsuario}, bienvenido al Simulador de Cursos de The Learning Revolution.`
+    `Hola ${nombreUsuario}, bienvenido al Simulador de Cursos de The Learning Revolution. Antes de continuar recorta que que el que CORTA no COBRA😊😡`
   );
 
   // Informar al usuario sobre el descuento
@@ -113,8 +113,10 @@ function main() {
   }
 
   // Calcular el descuento solo si se compraron 2 o más cursos
-  let descuentoTotal = 0;
+
   if (cursosElegidos.length >= 2) {
+    let descuentoTotal = 0;
+
     alert("Cursos comprados con descuento:");
 
     cursosElegidos.forEach((curso) => {
@@ -126,14 +128,21 @@ function main() {
       );
     });
 
+    const montoTotal =
+      cursosElegidos.reduce((total, curso) => total + curso.precio, 0) -
+      descuentoTotal;
     alert(`Descuento total aplicado: $${descuentoTotal} ARS`);
+    alert(`Monto total a pagar: $${montoTotal} ARS`);
   } else {
-    // Mostrar los cursos sin descuento si se compró solo uno
+    // Mostrar el curso sin descuento si se compró solo uno
     alert("Cursos comprados:");
 
     cursosElegidos.forEach((curso) => {
       alert(`Curso: ${curso.nombre}\nPrecio original: $${curso.precio} ARS\n`);
     });
+
+    const montoTotal = cursosElegidos[0].precio;
+    alert(`Monto total a pagar: $${montoTotal} ARS`);
   }
 
   alert(
@@ -142,4 +151,5 @@ function main() {
 }
 
 // Ejecutar la función principal cuando se carga la página
+
 main();
