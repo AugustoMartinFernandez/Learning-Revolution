@@ -55,7 +55,6 @@ body {
 .navbar-toggler {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
- 
 }
 
 .navbar-toggler-icon {
@@ -417,10 +416,7 @@ strong {
   justify-content: center;
 }
 
-
-
-/* ESTILOS DE ANUNCIO HORIZONTAL */
-.contenedor-anuncio{
+.contenedor-anuncio {
   background-image: url(https://i.gifer.com/EXAe.gif);
   background-attachment: fixed;
   background-size: cover;
@@ -461,6 +457,17 @@ strong {
   }
 }
 @media screen and (max-width: 480px) {
+  #contador-regresivo {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, #b3ffab3c, #12fff71e),
+      url(https://i.gifer.com/4svs.gif);
+    background-attachment: initial;
+    background-size: cover;
+    overflow: hidden;
+    height: 75vh;
+    margin-bottom: 50px;
+  }
   @keyframes desplazamiento {
     0% {
       transform: translateX(-100%);
@@ -484,38 +491,43 @@ strong {
   border-radius: 5px;
 }
 
-#contador-regresivo {
-  padding: 30px;
-  text-align: center;
-  background-image: url(https://i.gifer.com/4XCO.gif);
-  background-attachment: initial;
-  background-size: cover;
-  overflow: hidden;
-  height: 60vh;
-  margin-bottom: 50px;
-}
-.conte-regre{
-  background-image: url(https://i.gifer.com/2iiB.gif);
-  background-attachment: local;
-  background-size: cover;
+.conte-regre {
   margin-top: 40px;
 }
 
-
-#contador-regresivo h1 {
-  font-size: 3rem;
-  color: green; /* Rojo navideño */
+.contador {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 15px;
+}
+.oferta-container {
+  text-align: center;
+  background-color: #666666;
+  height: 40vh;
+  margin: 0;
+  background-image: url(https://i.gifer.com/2iiB.gif);
+  background-attachment: local;
+  background-size: cover;
 }
 
-#contador-regresivo p {
-  font-size: 2rem;
-  color: blue;
+.p-ofer {
+  margin-bottom: 0 !important;
+  color: white;
+}
+.unidad {
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 5px;
 }
 
-#cuenta-regresiva {
-  font-size: 2.1rem;
-  color: red; /* Azul oscuro moderno */
-  font-weight: bold;
+.separador {
+  margin: 5px;
 }
 
 .hero {

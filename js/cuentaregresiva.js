@@ -1,5 +1,4 @@
-// Establece la fecha límite para tu oferta especial (año, mes (0-11), día, hora, minuto, segundo)
-const fechaLimiteOferta = new Date(2023, 11, 31, 23, 59, 59); // 31 de diciembre de 2023, 23:59:59
+const fechaLimiteOferta = new Date(2023, 11, 31, 23, 59, 59);
 
 function actualizarContador() {
   const ahora = new Date().getTime();
@@ -11,15 +10,21 @@ function actualizarContador() {
     const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
     const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
-    document.getElementById('cuenta-regresiva').innerHTML =
-      dias + 'd ' + horas + 'h ' + minutos + 'm ' + segundos + 's';
+    document.getElementById('dias').innerText = formatTimeUnit(dias);
+    document.getElementById('horas').innerText = formatTimeUnit(horas);
+    document.getElementById('minutos').innerText = formatTimeUnit(minutos);
+    document.getElementById('segundos').innerText = formatTimeUnit(segundos);
 
-    setTimeout(actualizarContador, 1000); // Actualizar cada segundo
+    setTimeout(actualizarContador, 1000);
   } else {
-    document.getElementById('cuenta-regresiva').innerHTML = 'Oferta Finalizada';
+    document.querySelector('.contador').innerHTML = '<div class="oferta-finalizada">Oferta Finalizada</div>';
   }
 }
-// Llama a la función para iniciar el contador al cargar la página
-document.addEventListener('DOMContentLoaded', function () {
+
+function formatTimeUnit(unit) {
+  return unit < 10 ? `0${unit}` : unit;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
   actualizarContador();
 });
