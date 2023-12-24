@@ -8,7 +8,7 @@
 body {
   font-family: "Bungee Spice", sans-serif;
   font-family: "Merriweather", serif;
-  min-height: 100vh;
+  background-color: #ececec;
 }
 
 /* Img de portada */
@@ -134,14 +134,16 @@ svg:hover {
 }
 
 .div-img {
+  background-image: linear-gradient(to right, #b3ffab7a, #12fff761),
+    url(https://i.gifer.com/mR8.gif);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-attachment: fixed;
-  background-size: contain;
+  background-attachment: inherit;
+  background-size: cover;
   width: 100%;
-  height: 60vh;
+  height: 45vh;
 }
 
 .cover-text {
@@ -149,7 +151,7 @@ svg:hover {
 }
 
 .main-acerca {
-  min-height: 140vh;
+  min-height: 100vh;
 }
 
 p {
@@ -204,93 +206,94 @@ strong {
   margin: 20px;
 }
 
-/* TIENDA */
+/************************************** TIENDA *****************************************/
 .img-tienda {
   width: auto;
 }
-
-.card {
-  width: 300px;
-  margin: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  border-radius: 5px;
-}
-
-.section-card {
+.sec-tienda {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
-}
-
-.title.is-4 {
-  font-size: 1.4rem !important;
-}
-
-.pp-tienda {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.subtitle.is-6 {
-  font-size: 0.7rem;
-}
-
-.card-content {
-  padding: 1rem;
-}
-
-/* Seccion de la pagina de Testimonios */
-.testimonials {
-  display: flex;
-  overflow: hidden;
-  padding: 0px;
-  margin: 0 auto;
-}
-
-.testimonial {
-  text-align: center;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 260px;
   margin: 20px;
 }
-
-.testimonial img {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  box-shadow: rgba(10, 13, 17, 0.724) 0px 0px 0px 2px;
-}
-
-.botones {
+.card {
+  --bg-color: #fff;
+  position: relative;
+  padding: 12px;
+  width: 320px;
+  background: var(--bg-color);
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin: 10px;
 }
 
-.bt {
-  margin: 10px;
-}
-
-.testimonials {
+.card__img {
+  width: 100%;
+  height: 270px;
   overflow: hidden;
-  width: 300px;
-  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.testimonial-container {
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__content {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.testimonial {
-  width: 300px;
-  box-sizing: border-box;
+.card__title {
+  margin-top: 13px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffd700;
+}
+
+.card__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--main-color);
+  letter-spacing: 0.5px;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--main-color);
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__counter-score,
+.card__btn {
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--main-color);
+}
+
+.card__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: none;
+  background: transparent;
+}
+
+.card__btn-plus {
+  background: var(--bg-color);
 }
 
 /* SECCION CARRUSEL DE PAGINA DE INICIO */
@@ -359,44 +362,75 @@ strong {
 }
 
 /* Estilos para la sección de testimonios */
-.custom-testimonial-card {
-  background-color: #d2d4d6;
-  border: 1px solid #dee2e6;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
-}
-
-.custom-testimonial-img {
-  border-radius: 50%;
-  background-color: white;
-  max-width: 100px;
-  margin-bottom: 15px;
-  box-shadow: rgba(190, 210, 4, 0.4) 0px 5px, rgba(179, 182, 7, 0.3) 0px 10px,
-    rgba(166, 184, 3, 0.2) 0px 15px, rgba(171, 197, 4, 0.1) 0px 20px,
-    rgba(185, 209, 10, 0.05) 0px 25px;
-}
-
-.custom-testimonial-quote {
-  font-style: italic;
-  color: black;
-}
-
-.custom-client-name {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #495057;
-}
-
-.custom-testimonials {
+.testimonios-container {
+  display: flex;
   margin-top: 50px;
   margin-bottom: 100px;
   background-image: url(https://i.gifer.com/6ob.gif);
   background-attachment: fixed;
   background-size: cover;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards {
+  width: 300px;
+  background: white;
+  padding: 0.4em;
+  border-radius: 6px;
+  margin: 18px;
 }
 
+.card-image {
+  background-image: url(https://i.gifer.com/2GFv.gif);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 130px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
 .video-test {
   width: 100%;
   box-shadow: rgba(169, 172, 7, 0.646) 0px 40px 55px,
@@ -440,49 +474,6 @@ strong {
   font-size: 15px;
   color: wheat;
 }
-@media screen and (max-width: 768px) {
-  @keyframes desplazamiento {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(330%);
-    }
-  }
-  #anuncio {
-    position: absolute;
-    white-space: nowrap;
-    animation: desplazamiento 20s linear infinite;
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #contador-regresivo {
-    padding: 30px;
-    text-align: center;
-    background: linear-gradient(to right, #b3ffab3c, #12fff71e),
-      url(https://i.gifer.com/4svs.gif);
-    background-attachment: initial;
-    background-size: cover;
-    overflow: hidden;
-    height: 75vh;
-    margin-bottom: 50px;
-  }
-  @keyframes desplazamiento {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(220%);
-    }
-  }
-  #anuncio {
-    position: absolute;
-    white-space: nowrap;
-    animation: desplazamiento 20s linear infinite;
-    font-size: 15px;
-  }
-}
 
 #mensaje {
   background-color: #007bff;
@@ -504,6 +495,7 @@ strong {
   justify-content: center;
   border-radius: 15px;
 }
+/******************************* OFERTA EN TIENDA ********************/
 .oferta-container {
   text-align: center;
   background-color: #666666;
@@ -539,4 +531,278 @@ strong {
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+/************ MEDIA QUERIES **************/
+@media screen and (max-width: 768px) {
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(330%);
+    }
+  }
+  #anuncio {
+    position: absolute;
+    white-space: nowrap;
+    animation: desplazamiento 20s linear infinite;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .testimonials {
+    overflow: hidden;
+  }
+
+  .testimonial-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 40px;
+  }
+
+  .testimonial {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    cursor: pointer; /* Agregado para indicar que es interactivo */
+  }
+
+  .course {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .course img {
+    width: 100%;
+    height: auto;
+    display: block; /* Evita el espacio adicional debajo de la imagen */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .overlay p.discount {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .overlay button {
+    color: #fff;
+    background-color: #d0d00d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .testimonial:hover .overlay {
+    opacity: 1;
+  }
+  /********************************** ESTILOS DE BOTONES DEL CARRUSEL ****************************/
+  .carousel-control-prev-icon{
+    background-image: url(../images/icons8-rebobinar-el-botón-redondo-80.png);
+    background-color: #0b0404;
+    border-radius: 50%;
+    box-shadow: #d0d00d 0px 0px 0px 3px;
+  }
+  .carousel-control-next-icon {
+    background-image: url(../images/icons8-avance-rápido-redondo-80.png);
+    background-color: #0b0404;
+    border-radius: 50%;
+    box-shadow: #d0d00d 0px 0px 0px 3px;
+  }
+  #contador-regresivo {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, #b3ffab3c, #12fff71e),
+      url(https://i.gifer.com/4svs.gif);
+    background-attachment: initial;
+    background-size: cover;
+    overflow: hidden;
+    height: 75vh;
+    margin-bottom: 50px;
+  }
+  /* ANUNCIO TIENDA */
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(220%);
+    }
+  }
+  #anuncio {
+    position: absolute;
+    white-space: nowrap;
+    animation: desplazamiento 20s linear infinite;
+    font-size: 15px;
+  }
+}
+
+/* MENSAJE DE TIENDA */
+.message.is-link .message-body {
+  border-color: #d0d00d;
+  color: black;
+}
+
+/**************************** ESTILOS DEL FORMULARIO *************************************/
+.form-sec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 18px;
+  width: 500px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.message,
+.signin {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Estilos de los campos de entrada */
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: #f9f9f9;
+  color: #333;
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.form label .input + span {
+  color: #777;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 0.8em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:focus {
+  border-color: #00bfff;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #00bfff;
+  top: 5px;
+  font-size: 0.7em;
+}
+
+/* Estilos del botón de envío */
+.submit {
+  display: flex;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #00bfff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.submit:hover {
+  background-color: #00bfff96;
+}
+
+.social-account-container {
+  margin-top: 25px;
+}
+
+.social-account-container .title {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: rgb(170, 170, 170);
+}
+
+.social-account-container .social-accounts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.social-account-container .social-accounts .social-button {
+  background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+  border: 5px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-account-container .social-accounts .social-button .svg {
+  fill: white;
+  margin: auto;
+}
+
+.social-account-container .social-accounts .social-button:hover {
+  transform: scale(1.2);
+}
+
+.social-account-container .social-accounts .social-button:active {
+  transform: scale(0.9);
 }
