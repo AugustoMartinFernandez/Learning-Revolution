@@ -449,15 +449,15 @@ strong {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/******************************* OFERTA EN TIENDA ********************/
 .contenedor-anuncio {
-  background-image: url(https://i.gifer.com/EXAe.gif);
+  background-color: #0b0404;
   background-attachment: fixed;
   background-size: cover;
   height: 25px;
   overflow: hidden;
 }
-
+/******************************** ANIMACIONES *****************************888*/
 @keyframes desplazamiento {
   0% {
     transform: translateX(-100%);
@@ -472,7 +472,7 @@ strong {
   white-space: nowrap;
   animation: desplazamiento 25s linear infinite;
   font-size: 15px;
-  color: wheat;
+  color: #d0d00d;
 }
 
 #mensaje {
@@ -615,8 +615,9 @@ strong {
   .testimonial:hover .overlay {
     opacity: 1;
   }
+
   /********************************** ESTILOS DE BOTONES DEL CARRUSEL ****************************/
-  .carousel-control-prev-icon{
+  .carousel-control-prev-icon {
     background-image: url(../images/icons8-rebobinar-el-botón-redondo-80.png);
     background-color: #0b0404;
     border-radius: 50%;
@@ -639,7 +640,7 @@ strong {
     height: 75vh;
     margin-bottom: 50px;
   }
-  /* ANUNCIO TIENDA */
+  /********************************* ANUNCIO TIENDA ********************************8*/
   @keyframes desplazamiento {
     0% {
       transform: translateX(-100%);
