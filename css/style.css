@@ -13,11 +13,13 @@ body {
 
 /* Img de portada */
 .img-portada {
-  background: linear-gradient(to right, #11998e65, #38ef7e62),
+  background: linear-gradient(to right, #d8d10759, #7c09be58),
     url(../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp);
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 80vh;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -28,14 +30,21 @@ body {
 }
 
 .texto {
-  font-weight: 800;
-  color: #0b0404;
-  font-size: 40px;
-  padding-top: 180px;
+  text-shadow: 4px 2px 3px rgb(0, 0, 0);
+  font-weight: 900;
+  color: #008000;
+  font-size: 3rem;
+  padding-top: 140px;
+  /* -webkit-box-reflect:below 1px linear-grandiet(transparent, #0005);
+  box-shadow: 0 0 5px; */
 }
 
 .p {
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
   margin-top: 30px;
+  font-weight: 500;
+  color: white;
+  font-size: 1.1rem;
 }
 
 /* Nav */
@@ -74,13 +83,13 @@ body {
 }
 
 .footer-title {
-  font-size: 1.3em;
+  font-size: 1.33em;
   font-weight: bold;
 }
 
 .footer-description {
-  font-size: 0.9em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.7em;
 }
 
 .footer-social {
@@ -107,6 +116,10 @@ body {
   font-size: 0.8em;
   color: #777;
   margin-top: 30px;
+  background-image: url(https://i.gifer.com/fxy1.gif);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
 }
 
 /* iconos del footer */
@@ -144,6 +157,7 @@ svg:hover {
   background-size: cover;
   width: 100%;
   height: 45vh;
+  /* border-image: fill 0 linear-grandiet(#0003, #000); */
 }
 
 .cover-text {
@@ -155,6 +169,7 @@ svg:hover {
 }
 
 p {
+  font-size: 1.11rem;
   margin-bottom: 0.5rem;
 }
 
@@ -165,6 +180,10 @@ p {
 .h1-acerca {
   margin-top: 50px;
   margin-bottom: 15px;
+  background-image: url(https://i.gifer.com/fxy1.gif);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
 }
 
 /* strong */
