@@ -147,7 +147,7 @@ svg:hover {
 }
 
 .div-img {
-  background-image: linear-gradient(to right, #b3ffab7a, #12fff761),
+  background-image: linear-gradient(to right, #d8d10759, #7c09be58),
     url(https://i.gifer.com/mR8.gif);
   display: flex;
   flex-direction: row;
@@ -190,7 +190,7 @@ p {
 b,
 strong {
   font-weight: bolder;
-  color: #d0d00d;
+  color: #008000;
 }
 
 /* PREGUNTAS FRECUENTES */
@@ -200,13 +200,6 @@ strong {
 
 .p-preg {
   margin-bottom: 25px;
-}
-
-.h1-preg {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  font-weight: 800;
 }
 
 .container-preg {
@@ -229,6 +222,7 @@ strong {
 .img-tienda {
   width: auto;
 }
+
 .sec-tienda {
   display: flex;
   flex-direction: row;
@@ -236,6 +230,7 @@ strong {
   justify-content: center;
   margin: 20px;
 }
+
 .card {
   --bg-color: #fff;
   position: relative;
@@ -392,6 +387,7 @@ strong {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .cards {
   width: 300px;
   background: white;
@@ -450,6 +446,7 @@ strong {
 .name:hover {
   cursor: pointer;
 }
+
 .video-test {
   width: 100%;
   box-shadow: rgba(169, 172, 7, 0.646) 0px 40px 55px,
@@ -467,7 +464,9 @@ strong {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
 }
+
 /******************************* OFERTA EN TIENDA ********************/
 .contenedor-anuncio {
   background-color: #0b0404;
@@ -476,15 +475,18 @@ strong {
   height: 25px;
   overflow: hidden;
 }
+
 /******************************** ANIMACIONES *****************************888*/
 @keyframes desplazamiento {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(650%);
   }
 }
+
 #anuncio {
   text-align: center;
   position: absolute;
@@ -514,6 +516,7 @@ strong {
   justify-content: center;
   border-radius: 15px;
 }
+
 /******************************* OFERTA EN TIENDA ********************/
 .oferta-container {
   text-align: center;
@@ -529,6 +532,7 @@ strong {
   margin-bottom: 0 !important;
   color: white;
 }
+
 .unidad {
   text-align: center;
   background-color: red;
@@ -558,10 +562,12 @@ strong {
     0% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(330%);
     }
   }
+
   #anuncio {
     position: absolute;
     white-space: nowrap;
@@ -569,6 +575,7 @@ strong {
     font-size: 20px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .testimonials {
     overflow: hidden;
@@ -583,7 +590,8 @@ strong {
   .testimonial {
     flex: 0 0 100%;
     box-sizing: border-box;
-    cursor: pointer; /* Agregado para indicar que es interactivo */
+    cursor: pointer;
+    /* Agregado para indicar que es interactivo */
   }
 
   .course {
@@ -599,7 +607,8 @@ strong {
   .course img {
     width: 100%;
     height: auto;
-    display: block; /* Evita el espacio adicional debajo de la imagen */
+    display: block;
+    /* Evita el espacio adicional debajo de la imagen */
   }
 
   .overlay {
@@ -642,12 +651,14 @@ strong {
     border-radius: 50%;
     box-shadow: #d0d00d 0px 0px 0px 3px;
   }
+
   .carousel-control-next-icon {
     background-image: url(../images/icons8-avance-rápido-redondo-80.png);
     background-color: #0b0404;
     border-radius: 50%;
     box-shadow: #d0d00d 0px 0px 0px 3px;
   }
+
   #contador-regresivo {
     padding: 30px;
     text-align: center;
@@ -659,15 +670,18 @@ strong {
     height: 75vh;
     margin-bottom: 50px;
   }
+
   /********************************* ANUNCIO TIENDA ********************************8*/
   @keyframes desplazamiento {
     0% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(220%);
     }
   }
+
   #anuncio {
     position: absolute;
     white-space: nowrap;
@@ -689,6 +703,7 @@ strong {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .form {
   display: flex;
   width: 100%;
@@ -740,7 +755,7 @@ strong {
   transition: border-color 0.3s;
 }
 
-.form label .input + span {
+.form label .input+span {
   color: #777;
   position: absolute;
   left: 10px;
@@ -754,8 +769,8 @@ strong {
   border-color: #00bfff;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:focus+span,
+.form label .input:valid+span {
   color: #00bfff;
   top: 5px;
   font-size: 0.7em;
@@ -825,4 +840,56 @@ strong {
 
 .social-account-container .social-accounts .social-button:active {
   transform: scale(0.9);
+}
+
+
+/****************************** VIDEO INFORMATIVO ***************************/
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #333;
+  border-radius: 8px;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-title {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background: #444;
+  border-top: 1px solid #666;
+  border-radius: 0 0 8px 8px;
+}
+
+.h2-preg {
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+  font-weight: 700;
+  color: #008000;
+  font-size: 2rem;
+}
+
+.h1-preg {
+  text-shadow: 2px 2px 3px #000000;
+  font-weight: 700;
+  color: #008000;
+  font-size: 2.3rem;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-weight: 800;
 }
