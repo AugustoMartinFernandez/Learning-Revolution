@@ -13,7 +13,7 @@ body {
 
 /* Img de portada */
 .img-portada {
-  background: linear-gradient(to right, #d8d10759, #7c09be58),
+  background: linear-gradient(to right, #d8d10794, #7c09be80),
     url(../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,6 +21,13 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+.cont-carrusel {
+  background: url(https://i.gifer.com/9viJ.gif);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
 }
 
 /* Titulo portada */
@@ -164,10 +171,6 @@ svg:hover {
   margin: 20px;
 }
 
-.main-acerca {
-  min-height: 100vh;
-}
-
 p {
   font-size: 1.11rem;
   margin-bottom: 0.5rem;
@@ -194,7 +197,7 @@ strong {
 }
 
 /* PREGUNTAS FRECUENTES */
-.Container{
+.Container {
   margin: 20px;
 }
 
@@ -203,7 +206,7 @@ strong {
 }
 
 .container-preg {
-  margin-bottom: 100px;
+  margin: 20px;
 }
 
 .main-preg {
@@ -374,7 +377,6 @@ strong {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 /******************************* OFERTA EN TIENDA ********************/
@@ -494,7 +496,7 @@ strong {
   .testimonial-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 5px;
   }
 
@@ -514,14 +516,13 @@ strong {
     justify-content: center;
     margin: auto;
     border-radius: 7%;
-    box-shadow: #7c09bebe 0px 22px 70px 4px;
+    /* box-shadow: #7c09bebe 0px 22px 70px 4px; */
   }
 
   .course img {
     width: 100%;
     height: auto;
     display: block;
-    /* Evita el espacio adicional debajo de la imagen */
   }
 
   .overlay {
@@ -668,7 +669,7 @@ strong {
   transition: border-color 0.3s;
 }
 
-.form label .input+span {
+.form label .input + span {
   color: #777;
   position: absolute;
   left: 10px;
@@ -682,8 +683,8 @@ strong {
   border-color: #00bfff;
 }
 
-.form label .input:focus+span,
-.form label .input:valid+span {
+.form label .input:focus + span,
+.form label .input:valid + span {
   color: #00bfff;
   top: 5px;
   font-size: 0.7em;
@@ -755,7 +756,6 @@ strong {
   transform: scale(0.9);
 }
 
-
 /****************************** VIDEO INFORMATIVO ***************************/
 .gallery-container {
   width: 100%;
@@ -773,7 +773,8 @@ strong {
   overflow: hidden;
   background: #333;
   border-radius: 8px;
-  box-shadow: #7c09beb0 2px 4px 4px, #008000 0px 7px 10px -3px, #7c09beb0 0px -3px 0px inset;
+  box-shadow: #7c09beb0 2px 4px 4px, #008000 0px 7px 10px -3px,
+    #7c09beb0 0px -3px 0px inset;
 }
 
 .video iframe {
@@ -865,7 +866,6 @@ strong {
 }
 
 @keyframes rubberBand {
-
   0%,
   100% {
     transform: scale(1);
@@ -886,6 +886,7 @@ strong {
     transform: scale(0.95);
   }
 }
+
 /******************************* ESTILOS DE CURSOS DE TIENDA *********************************/
 .curso-container {
   display: flex;
@@ -897,7 +898,8 @@ strong {
 }
 
 .curso-card {
-  position: relative; /* Agrega posición relativa para que el texto de superposición esté en relación con esto */
+  position: relative;
+  /* Agrega posición relativa para que el texto de superposición esté en relación con esto */
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -908,7 +910,8 @@ strong {
 
 .bg-image {
   position: relative;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .bg-image img {
@@ -929,13 +932,14 @@ strong {
   align-items: center;
   justify-content: center;
   color: black;
-  background: #f5f5f5f8; 
+  background: #f5f5f5f8;
   opacity: 0;
-  transition: opacity 0.4s ease; 
+  transition: opacity 0.4s ease;
 }
 
 .curso-card:hover .overlay-text {
-  opacity: 1; /* Mostrar el texto de superposición al pasar el ratón */
+  opacity: 1;
+  /* Mostrar el texto de superposición al pasar el ratón */
 }
 
 .curso-info {
