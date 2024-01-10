@@ -380,35 +380,34 @@ main();*/
 // });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let cursos = [
-    {
-      nombre: "Pack de Cursos de trading",
-      imagen: "../images/Cursotrading.png",
-      enlace: "",
-      precioOriginal: "$7.000,00",
-      precioOferta: "$2.000,00",
-    },
-    {
-      nombre: "Pack de Cursos de Desarrollo Web",
-      imagen: "../images/Desarrolloweb.png",
-      enlace: "",
-      precioOriginal: "$9.000,00",
-      precioOferta: "$4.500,00",
-    },
-    {
-      nombre: "Pack de Cursos de Hostinger",
-      imagen: "../images/hostinger.png",
-      enlace: "",
-      precioOriginal: "$5.000,00",
-      precioOferta: "$2.000,00",
-    },
-    {
-      nombre: "Pack de Cursos de JavaScript",
-      imagen: "../images/javascript.png",
-      enlace: "",
-      precioOriginal: "$10.000,00",
-      precioOferta: "$6.000,00",
-    },
+  let cursos = [{
+    nombre: "Pack de Cursos de trading",
+    imagen: "../images/Cursotrading.png",
+    enlace: "",
+    precioOriginal: "$7.000,00",
+    precioOferta: "$2.000,00",
+  },
+  {
+    nombre: "Pack de Cursos de Desarrollo Web",
+    imagen: "../images/Desarrolloweb.png",
+    enlace: "",
+    precioOriginal: "$9.000,00",
+    precioOferta: "$4.500,00",
+  },
+  {
+    nombre: "Pack de Cursos de Hostinger",
+    imagen: "../images/hostinger.png",
+    enlace: "",
+    precioOriginal: "$5.000,00",
+    precioOferta: "$2.000,00",
+  },
+  {
+    nombre: "Pack de Cursos de JavaScript",
+    imagen: "../images/javascript.png",
+    enlace: "",
+    precioOriginal: "$10.000,00",
+    precioOferta: "$6.000,00",
+  },
   ];
 
   let contenedorCursos = document.querySelector("#contenedor");
@@ -434,8 +433,8 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="original-price">${curso.precioOriginal}</span>
               <span class="discount-price">${curso.precioOferta}</span>
             </div>
-            <div class="d-grid gap-2 col-10 mx-auto">
-              <button class="btn btn-primary btn-agregar-carrito" data-nombre="${curso.nombre}" data-precio="${curso.precioOferta}">Agregar al carrito</button>
+            <div class="d-grid  col-8 mx-auto mt-3">
+              <button class="btn-vaciar-carrito btn-agregar-carrito" data-nombre="${curso.nombre}" data-precio="${curso.precioOferta}">Agregar al carrito</button>
             </div>
           </div>
         </div>
@@ -478,9 +477,9 @@ document.addEventListener("DOMContentLoaded", function () {
     listaCarrito.innerHTML = "";
     carrito.forEach((item) => {
       listaCarrito.innerHTML += `
-        <li>${item.nombre} - Cantidad: ${item.cantidad} - Precio: $${(
-        item.precio * item.cantidad
-      ).toFixed(2)}</li>
+        <li>${item.nombre} | Cantidad: ${item.cantidad} | Precio: $${(
+          item.precio * item.cantidad
+        ).toFixed(3)}</li>
       `;
     });
   }
@@ -491,7 +490,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (acc, item) => acc + item.precio * item.cantidad,
       0
     );
-    totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
+    totalCarrito.textContent = `Total: $${total.toFixed(3)}`;
   }
 
   // Función para guardar el carrito en el almacenamiento local
