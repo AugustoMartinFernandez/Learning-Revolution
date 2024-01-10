@@ -859,7 +859,7 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 45px;
+  gap: 25px;
   margin: 30px;
 }
 
@@ -919,10 +919,11 @@ p {
 
 .price-info {
   display: flex;
-  justify-content: center;
   margin-top: 10px;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 .original-price {
