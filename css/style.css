@@ -651,7 +651,7 @@ p {
   transition: border-color 0.3s;
 }
 
-.form label .input + span {
+.form label .input+span {
   color: #777;
   position: absolute;
   left: 10px;
@@ -665,8 +665,8 @@ p {
   border-color: #00bfff;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:focus+span,
+.form label .input:valid+span {
   color: #00bfff;
   top: 5px;
   font-size: 0.7em;
@@ -830,6 +830,7 @@ p {
 }
 
 @keyframes rubberBand {
+
   0%,
   100% {
     transform: scale(1);
@@ -874,14 +875,14 @@ p {
   position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .bg-image img {
   width: 100%;
   height: auto;
   display: block;
-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .curso-info {
@@ -981,6 +982,7 @@ border-radius: 10px;
 .swal2-cancel {
   margin: 10px;
 }
+
 /*********************************** Estilos de modal de cursos **************************/
 .modal {
   display: none;
@@ -1024,7 +1026,8 @@ border-radius: 10px;
 /* Agrega este estilo para el carrito desplegable */
 #carrito-desplegable {
   position: fixed;
-  top: 70px; /* Ajusta según tu diseño */
+  top: 70px;
+  /* Ajusta según tu diseño */
   right: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -1045,3 +1048,27 @@ border-radius: 10px;
 }
 
 /* Añade animaciones o estilos adicionales según tus preferencias */
+.toastify {
+  display: flex;
+  padding: 12px 20px;
+  color: #fff;
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .12), 0 10px 36px -4px rgba(77, 96, 232, .3);
+  background: -webkit-linear-gradient(315deg, #73a5ff, #5477f5);
+  background: linear-gradient(135deg, #ff6347, #ff6347);
+  position: fixed;
+  opacity: 0;
+  transition: all .4s cubic-bezier(.215, .61, .355, 1);
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: calc(50% - 20px);
+  z-index: 2147483647;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+/***************************** TOASTIFY ****************************/
+.btn-success {
+  background-color: #ff6347;
+}
