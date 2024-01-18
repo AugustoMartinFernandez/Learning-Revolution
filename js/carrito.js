@@ -1,39 +1,83 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let cursos = [
-    {
+  let cursos = [{
       nombre: "Pack de Cursos de Trading desde 0",
       imagen: "../images/Cursotrading.png",
-      enlace: "",
-      precioOriginal: "$7.000,00",
-      precioOferta: "$2.000,00",
+      precioOriginal: "$7,000.00",
+      precioOferta: "$2,000.00",
+      contenido: `
+        <h2>Trading desde 0 - Curso Completo💵</h2>
+        <p>Este curso te enseñará los fundamentos del trading, desde análisis técnico hasta estrategias avanzadas de gestión de riesgos.</p>
+        <ul>
+          <li>*Introducción al mercado financiero</li>
+          <li>*Análisis técnico y fundamental</li>
+          <li>*Estrategias de trading efectivas</li>
+          <li>*Gestión de riesgos y psicología del trader</li>
+        </ul>
+      `,
     },
     {
       nombre: "Pack de Cursos de Desarrollo Web",
       imagen: "../images/Desarrolloweb.png",
-      enlace: "",
-      precioOriginal: "$9.000,00",
-      precioOferta: "$5.500,00",
+      precioOriginal: "$9,000.00",
+      precioOferta: "$5,500.00",
+      contenido: `
+        <h2>Desarrollo Web - Curso Completo</h2>
+        <p>Conviértete en un desarrollador web profesional con este completo paquete de cursos que abarca desde HTML y CSS hasta frameworks avanzados.</p>
+        <ul>
+          <li>HTML y CSS desde cero</li>
+          <li>JavaScript y jQuery</li>
+          <li>Frameworks populares (React, Angular, Vue)</li>
+          <li>Desarrollo backend con Node.js y Express</li>
+        </ul>
+      `,
     },
     {
       nombre: "Pack de Cursos de Hostinger",
       imagen: "../images/hostinger.png",
-      enlace: "",
-      precioOriginal: "$5.000,00",
-      precioOferta: "$2.000,00",
+      precioOriginal: "$5,000.00",
+      precioOferta: "$2,000.00",
+      contenido: `
+        <h2>Cursos de Hosting y Administración de Servidores</h2>
+        <p>Aprende a administrar servidores y a utilizar servicios de hosting con los cursos especializados de Hostinger.</p>
+        <ul>
+          <li>Configuración de servidores Linux</li>
+          <li>Uso eficiente de servicios de hosting</li>
+          <li>Seguridad en servidores y sitios web</li>
+          <li>Optimización de rendimiento</li>
+        </ul>
+      `,
     },
     {
       nombre: "Pack de Cursos de JavaScript",
       imagen: "../images/javascript.png",
-      enlace: "",
-      precioOriginal: "$10.000,00",
-      precioOferta: "$4.000,00",
+      precioOriginal: "$10,000.00",
+      precioOferta: "$4,000.00",
+      contenido: `
+        <h2>JavaScript - Dominando el Lenguaje</h2>
+        <p>Este paquete de cursos te llevará desde los conceptos básicos de JavaScript hasta las últimas tendencias y técnicas de desarrollo frontend y backend.</p>
+        <ul>
+          <li>Fundamentos de JavaScript</li>
+          <li>Frameworks y bibliotecas modernas (React, Angular, Node.js)</li>
+          <li>Desarrollo de aplicaciones web interactivas</li>
+          <li>Pruebas y optimización de rendimiento</li>
+        </ul>
+      `,
     },
     {
       nombre: "Pack de curso Programacion en Python",
       imagen: "../images/python.png",
-      enlace: "",
-      precioOriginal: "$10.000,00",
-      precioOferta: "$4.000,00",
+      precioOriginal: "$10,000.00",
+      precioOferta: "$4,000.00",
+      contenido: `
+        <h2>Programación en Python - Curso Avanzado</h2>
+        <p>Explora las capacidades de Python para desarrollo web, análisis de datos, inteligencia artificial y más con este completo paquete de cursos.</p>
+        <ul>
+          <li>Desarrollo web con Django y Flask</li>
+          <li>Análisis de datos con Pandas y NumPy</li>
+          <li>Introducción a la inteligencia artificial con Python</li>
+          <li>Automatización y scripting</li>
+        </ul>
+      `,
     },
   ];
 
@@ -42,10 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalCarrito = document.querySelector("#total-carrito");
   let carrito = [];
 
-  // Función para confirmar y luego vaciar el carrito
+  const modal = document.getElementById("modal");
+  const modalContent = document.getElementById("modalContent");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+
   function confirmarVaciarCarrito() {
     if (carrito.length === 0) {
-      // Si el carrito está vacío, simplemente vaciarlo sin mostrar la alerta
       vaciarCarrito();
     } else {
       const swalWithBootstrapButtons = Swal.mixin({
@@ -85,40 +131,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Función para renderizar la lista de cursos
   function renderizarCursos() {
     contenedorCursos.innerHTML = "";
     cursos.forEach((curso) => {
-      contenedorCursos.innerHTML += `
-          <div class="curso-card">
-            <a href="">
-              <div class="bg-image">
-                <img src="${curso.imagen}" alt="${curso.nombre}" />
-                <div class="overlay-text">Ver contenido del curso</div>
-              </div>
-            </a>
-            <div class="curso-info">
-              <h3 class="product-name">${curso.nombre}</h3>
-              <div class="price-info">
-                <span class="original-price">${curso.precioOriginal}</span>
-                <span class="discount-price">${curso.precioOferta}</span>
-              </div>
-              <div class="d-grid  col-8 mx-auto mt-3">
-                <button class="btn-vaciar-carrito btn-agregar-carrito" data-nombre="${curso.nombre}" data-precio="${curso.precioOferta}">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
-        `;
-    });
+      const cursoCard = document.createElement("div");
+      cursoCard.classList.add("col-md-4", "mb-4", "curso-card");
 
-    // Agregar eventos a los botones de agregar al carrito
-    let btnsAgregarCarrito = document.querySelectorAll(".btn-agregar-carrito");
-    btnsAgregarCarrito.forEach((btn) => {
-      btn.addEventListener("click", agregarAlCarrito);
+      const cursoInfo = document.createElement("div");
+      cursoInfo.classList.add("curso-info");
+      cursoInfo.innerHTML = `
+        <div class="bg-image">
+          <img src="${curso.imagen}">
+        </div>
+        <h3 class="product-name">${curso.nombre}</h3>
+        <div class="price-info">
+          <span class="original-price">${curso.precioOriginal}</span>
+          <span class="discount-price">${curso.precioOferta}</span>
+        </div>
+        <div class="d-grid col-8 mx-auto mt-3">
+          <button class="btn-ver-contenido btn-vaciar-carrito mb-2" data-curso="${curso.nombre}">Ver Contenido</button>
+          <button class="btn-vaciar-carrito btn-agregar-carrito" data-nombre="${curso.nombre}" data-precio="${curso.precioOferta}">Agregar al carrito</button>
+        </div>
+      `;
+
+      const btnVerContenido = cursoInfo.querySelector(".btn-ver-contenido");
+      btnVerContenido.addEventListener("click", function (event) {
+        event.preventDefault();
+        const nombre = btnVerContenido.dataset.curso;
+        const cursoSeleccionado = cursos.find(
+          (curso) => curso.nombre === nombre
+        );
+        mostrarModal(generarContenidoModal(cursoSeleccionado));
+      });
+
+      const btnAgregarCarrito = cursoInfo.querySelector(".btn-agregar-carrito");
+      btnAgregarCarrito.addEventListener("click", function (event) {
+        event.preventDefault();
+        agregarAlCarrito(event);
+      });
+
+      cursoCard.appendChild(cursoInfo);
+      contenedorCursos.appendChild(cursoCard);
     });
   }
 
-  // Función para agregar un curso al carrito
   function agregarAlCarrito(event) {
     const nombre = event.target.dataset.nombre;
     const precio = parseFloat(
@@ -142,19 +198,34 @@ document.addEventListener("DOMContentLoaded", function () {
     guardarCarritoEnStorage();
   }
 
-  // Función para renderizar el carrito
   function renderizarCarrito() {
     listaCarrito.innerHTML = "";
-    carrito.forEach((item) => {
-      listaCarrito.innerHTML += `
-          <li>${item.nombre} | Cantidad: ${item.cantidad} | Precio: $${(
-        item.precio * item.cantidad
-      ).toFixed(3)}</li>
-        `;
+    carrito.forEach((item, index) => {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `
+        ${item.nombre} | Cantidad: ${item.cantidad} | Precio: $${(
+          item.precio * item.cantidad
+        ).toFixed()}
+        <button class="btn-eliminar-curso btn btn-danger btn-sm ms-2" data-index="${index}">Eliminar</button>
+      `;
+      listaCarrito.appendChild(listItem);
+    });
+
+    document.querySelectorAll(".btn-eliminar-curso").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const index = parseInt(btn.dataset.index);
+        eliminarCursoDelCarrito(index);
+      });
     });
   }
 
-  // Función para actualizar el total del carrito
+  function eliminarCursoDelCarrito(index) {
+    carrito.splice(index, 1);
+    renderizarCarrito();
+    actualizarTotal();
+    guardarCarritoEnStorage();
+  }
+
   function actualizarTotal() {
     const total = carrito.reduce(
       (acc, item) => acc + item.precio * item.cantidad,
@@ -163,12 +234,10 @@ document.addEventListener("DOMContentLoaded", function () {
     totalCarrito.textContent = `Total: $${total.toFixed(3)}`;
   }
 
-  // Función para guardar el carrito en el almacenamiento local
   function guardarCarritoEnStorage() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
 
-  // Función para cargar el carrito desde el almacenamiento local
   function cargarCarritoDesdeStorage() {
     const carritoStorage = localStorage.getItem("carrito");
     if (carritoStorage) {
@@ -178,7 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Función para vaciar el carrito
   function vaciarCarrito() {
     carrito = [];
     renderizarCarrito();
@@ -186,12 +254,36 @@ document.addEventListener("DOMContentLoaded", function () {
     guardarCarritoEnStorage();
   }
 
-  // Agregar evento al botón "Vaciar carrito"
   document
     .querySelector("#vaciar-carrito")
     .addEventListener("click", confirmarVaciarCarrito);
 
-  // Cargar cursos y carrito al cargar la página
+  closeModalBtn.addEventListener("click", function () {
+    cerrarModal();
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      cerrarModal();
+    }
+  });
+
+  function mostrarModal(contenido) {
+    modalContent.innerHTML = contenido;
+    modal.style.display = "block";
+  }
+
+  function cerrarModal() {
+    modal.style.display = "none";
+  }
+
+  function generarContenidoModal(curso) {
+    return `<ul>
+      <li><strong>Contenido:</strong>${curso.contenido}</li>
+    </ul>
+  `;
+  }
+
   renderizarCursos();
   cargarCarritoDesdeStorage();
 });
