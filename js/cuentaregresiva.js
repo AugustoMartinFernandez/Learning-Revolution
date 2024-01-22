@@ -1,4 +1,4 @@
-const fechaLimiteOferta = new Date(2023, 11, 31, 23, 59, 59);
+const fechaLimiteOferta = new Date(2024, 0, 31, 23, 59, 59);
 
 function actualizarContador() {
   const ahora = new Date().getTime();

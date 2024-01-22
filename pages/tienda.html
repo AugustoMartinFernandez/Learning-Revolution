@@ -99,27 +99,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
     </nav>
   </header>
   <div>
-    <!-- <div class="oferta-container d-lg-none d-md-none">
-      <h2 style="padding-top: 20px; color: #f3f3f3; margin: 0%" class="h1-preg">
-        ¡Oferta Exclusiva!
-      </h2>
-      <p>
-        ¡Compra cinco cursos por solo <strong>6,000 ARS!</strong> Ofertas
-        imperdibles <strong>hasta</strong>:
-      </p>
-      <div class="contador">
-        <div id="dias" class="unidad">00</div>
-        <div class="separador">D</div>
-        <div id="horas" class="unidad">00</div>
-        <div class="separador">H</div>
-        <div id="minutos" class="unidad">00</div>
-        <div class="separador">M</div>
-        <div id="segundos" class="unidad">00</div>
-        <div class="separador">S</div>
-      </div>
-      <p class="p-ofer">¡No te pierdas esta oportunidad!</p>
-    </div>
-    <div id="contador-regresivo"></div> -->
+    <div id="contador-regresivo"></div>
     <div style="overflow: hidden;">
       <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
         style="fill: #0b0404; width: 124%; height: 77px;">
@@ -137,7 +117,32 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
       </h1>
     </div>
   </div>
-
+  <div id="ofertaModal" class="modal is-centered">
+    <div class="modal-background"></div>
+    <div class="modal-content" style="background-color: #ff6347; padding: 5px; border: 0;">
+      <div class="oferta-container">
+        <h2 style="padding-top: 20px; color: #f3f3f3; margin: 0%" class="h1-preg">
+          ¡Oferta Exclusiva!
+        </h2>
+        <p>
+          ¡Compra cinco cursos por solo <strong>6,000 ARS!</strong> Ofertas
+          imperdibles <strong>hasta</strong>:
+        </p>
+        <div class="contador">
+          <div id="dias" class="unidad">00</div>
+          <div class="separador">D</div>
+          <div id="horas" class="unidad">00</div>
+          <div class="separador">H</div>
+          <div id="minutos" class="unidad">00</div>
+          <div class="separador">M</div>
+          <div id="segundos" class="unidad">00</div>
+          <div class="separador">S</div>
+        </div>
+        <p class="p-ofer">¡No te pierdas esta oportunidad!</p>
+      </div>
+    </div>
+    <button id="closeModal" class="modal-close is-large" aria-label="close" style="margin-top: 70px;"></button>
+  </div>
   <main class="main-tienda">
     <section class="seccion-carrito container-sm">
       <!-- Sección de Carrito -->
@@ -238,7 +243,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
   <!-- <script src="../js/simulador.js"></script> -->
   <script src="../js/modal.js"></script>
   <script src="../js/carrito.js"></script>
-  <script src="../js/cuentaregresiva.js"></script>
+  <!-- <script src="../js/cuentaregresiva.js"></script> -->
+  <script src="../js/modal_oferta.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
