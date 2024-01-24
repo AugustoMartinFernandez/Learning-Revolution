@@ -105,6 +105,21 @@ strong {
   background-image: url("https://img.icons8.com/ios-filled/50/FFFFFF/user-menu-male.png");
 }
 
+.navbar-nav .nav-link:hover {
+  background: linear-gradient(to right, #f1ea07, #9812e6);
+  /* Gradient de dos colores al pasar el cursor */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background: linear-gradient(to right, #d8d107, #64059b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* FOOTER */
 .footer {
   background-color: #f5f5f5;
@@ -157,17 +172,6 @@ strong {
   color: transparent;
 }
 
-/* iconos del footer */
-/* .img,
-svg {
-  background-color: #f3f3f3;
-  border-radius: 30%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  outline: 2px solid #f5f5f5;
-  transition: outline-color 0.5s ease;
-} */
 
 */ .img:hover,
 svg:hover {
@@ -180,19 +184,6 @@ svg:hover {
   margin: 20px;
   margin-bottom: 0;
 }
-
-/* .div-img {
-  background-image: linear-gradient(to right, #d8d10759, #7c09be58),
-    url(https://i.gifer.com/jVo.gif);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-attachment: inherit;
-  background-size: cover;
-  width: 100%;
-  height: 45vh;
-}  */
 
 .cover-text {
   margin: 20px;
@@ -273,39 +264,50 @@ p {
 }
 
 /* Estilos para la sección de testimonios */
-.testimonios-container {
+/* Estilos generales para la sección de testimonios */
+.testimonials-section {
   display: flex;
-  margin-top: 50px;
-  background-image: url(https://i.gifer.com/6ob.gif);
-  background-attachment: fixed;
-  background-size: cover;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  flex-direction: row;
 }
-
-.cards {
-  width: 300px;
-  background: white;
-  padding: 0.4em;
-  border-radius: 6px;
-  margin: 18px;
+/* Estilos para cada tarjeta de testimonio */
+.testimonial {
+  background-color: #fff;
+  max-width: 330px;
+  margin: 30px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+  transition: transform 0.3s ease-in-out;
 }
-
-.card-image {
-  background-image: url(https://i.gifer.com/2GFv.gif);
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: rgb(236, 236, 236);
+.testimonial:hover {
+  transform: scale(1.05);
+}
+/* Estilos para la imagen dentro de la tarjeta */
+.testimonial img {
   width: 100%;
-  height: 130px;
-  border-radius: 6px 6px 0 0;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
-
-.card-image:hover {
-  transform: scale(0.98);
+/* Estilos para el texto del testimonio */
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
-
+/* Estilos para el autor del testimonio */
+.testimonial-author {
+  font-style: italic;
+  font-size: 12px;
+  color: #555;
+}
+/* Estilos para la transición de la tarjeta al hacer hover */
+.testimonial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 .category {
   text-transform: uppercase;
   font-size: 0.7em;
@@ -415,7 +417,9 @@ p {
 /******************************* OFERTA EN TIENDA ********************/
 .oferta-container {
   text-align: center;
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(0deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgba(253, 187, 45, 1) 100%);
   height: 40vh;
   margin: 0;
   background-image: url(https://i.gifer.com/2iiB.gif);
@@ -487,7 +491,6 @@ p {
     flex: 0 0 100%;
     box-sizing: border-box;
     cursor: pointer;
-    /* Agregado para indicar que es interactivo */
   }
 
   .course {
@@ -498,7 +501,6 @@ p {
     justify-content: center;
     margin: auto;
     border-radius: 7%;
-    /* box-shadow: #7c09bebe 0px 22px 70px 4px; */
   }
 
   .course img {
@@ -555,8 +557,6 @@ p {
     box-shadow: #d0d00d 0px 0px 0px 3px;
   }
 
-
-
   /********************************* ANUNCIO TIENDA ********************************8*/
   @keyframes desplazamiento {
     0% {
@@ -580,152 +580,6 @@ p {
 .message.is-link .message-body {
   border-color: #d0d00d;
   color: black;
-}
-
-/**************************** ESTILOS DEL FORMULARIO *************************************/
-.form-sec {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.form {
-  display: flex;
-  width: 100%;
-  margin: 20px;
-  padding: 16px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  gap: 18px;
-  width: 500px;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.message,
-.signin {
-  font-size: 14px;
-  color: #777;
-}
-
-/* Estilos de los campos de entrada */
-.flex {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.form label {
-  position: relative;
-}
-
-.form label .input {
-  background-color: #f9f9f9;
-  color: #333;
-  width: 100%;
-  padding: 10px;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s;
-}
-
-.form label .input+span {
-  color: #777;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  font-size: 0.8em;
-  cursor: text;
-  transition: 0.3s ease;
-}
-
-.form label .input:focus {
-  border-color: #00bfff;
-}
-
-.form label .input:focus+span,
-.form label .input:valid+span {
-  color: #00bfff;
-  top: 5px;
-  font-size: 0.7em;
-}
-
-/* Estilos del botón de envío */
-.submit {
-  display: flex;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  background-color: #00bfff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.submit:hover {
-  background-color: #00bfff96;
-}
-
-.social-account-container {
-  margin-top: 25px;
-}
-
-.social-account-container .title {
-  display: block;
-  text-align: center;
-  font-size: 10px;
-  color: rgb(170, 170, 170);
-}
-
-.social-account-container .social-accounts {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 5px;
-}
-
-.social-account-container .social-accounts .social-button {
-  background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
-  border: 5px solid white;
-  padding: 5px;
-  border-radius: 50%;
-  width: 40px;
-  aspect-ratio: 1;
-  display: grid;
-  place-content: center;
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
-  transition: all 0.2s ease-in-out;
-}
-
-.social-account-container .social-accounts .social-button .svg {
-  fill: white;
-  margin: auto;
-}
-
-.social-account-container .social-accounts .social-button:hover {
-  transform: scale(1.2);
-}
-
-.social-account-container .social-accounts .social-button:active {
-  transform: scale(0.9);
 }
 
 /****************************** VIDEO INFORMATIVO ***************************/
@@ -900,11 +754,6 @@ p {
   color: #888;
 }
 
-.discount-price {
-  color: #27ae60;
-  font-weight: bold;
-}
-
 /************************************************ Seccion Carrito *******************************************/
 
 .seccion-carrito {
@@ -1012,7 +861,6 @@ p {
   cursor: pointer;
 }
 
-
 /* Agrega este estilo para el carrito desplegable */
 #carrito-desplegable {
   position: fixed;
@@ -1037,17 +885,15 @@ p {
   font-weight: bold;
 }
 
-/* Añade animaciones o estilos adicionales según tus preferencias */
 .toastify {
   display: flex;
   padding: 12px 20px;
   color: #fff;
-  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .12), 0 10px 36px -4px #4d60e84d;
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px #4d60e84d;
   background: -webkit-linear-gradient(315deg, #73a5ff, #5477f5);
-  background: linear-gradient(135deg, #ff6347, #ff6347);
   position: fixed;
   opacity: 0;
-  transition: all .4s cubic-bezier(.215, .61, .355, 1);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   border-radius: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -1062,7 +908,70 @@ p {
 .btn-success {
   background-color: #ff6347;
 }
+
 #contenedorGrafico {
   text-align: center;
   margin: auto;
+}
+
+.unique-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.unique-title {
+  text-align: center;
+  color: #333;
+}
+
+.unique-label {
+  display: block;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.unique-input,
+.unique-textarea,
+.unique-radio {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.unique-input:focus,
+.unique-textarea:focus,
+.unique-radio:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+.unique-options {
+  margin-bottom: 15px;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-success:hover {
+  background-color: #bc3020;
 }

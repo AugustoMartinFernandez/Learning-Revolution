@@ -62,7 +62,7 @@ let opciones = {
   plugins: {
     title: {
       display: true,
-      text: "Uso de Lenguajes de Programación mas populares y usados por Año",
+      text: "Lenguajes de Programación mas populares y usados por Año",
       font: {
         size: 18,
       },
@@ -280,3 +280,5 @@ document.addEventListener("DOMContentLoaded", function () {
     options: opcionesSueldosMensuales,
   });
 });
+
+

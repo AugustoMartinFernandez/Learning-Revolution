@@ -161,6 +161,34 @@
         </div>
       </figure>
     </div>
+    <section class="section-form">
+
+      <form action="procesar_formulario.php" method="POST" class="unique-form">
+        <!-- Cambia "procesar_formulario.php" al script que manejará los datos del formulario -->
+        <h2 class="h1-preg " style="text-align: center; margin: 20px; font-size: 1.8rem; margin-bottom: 30px;">
+          Formulario de Opinión</h2>
+        <label for="nombre" class="unique-label">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required class="unique-input">
+
+        <label for="correo" class="unique-label">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required class="unique-input">
+
+        <label for="telefono" class="unique-label">Número de Celular:</label>
+        <input type="tel" id="telefono" name="telefono" required class="unique-input">
+
+        <label class="unique-label"> Dejanos tus Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="2" required class="unique-textarea"></textarea>
+
+        <label class="unique-label">¿Desea recibir una respuesta?</label>
+        <div class="unique-options">
+          <label><input type="radio" name="respuesta" value="si" class="unique-radio"> Sí</label>
+          <label><input type="radio" name="respuesta" value="no" class="unique-radio"> No</label>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 17px;">
+          <button type="submit" class="btn-vaciar-carrito">Enviar Opinión</button>
+        </div>
+      </form>
+    </section>
   </main>
 
 
