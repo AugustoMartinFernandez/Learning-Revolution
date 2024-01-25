@@ -97,7 +97,9 @@ strong {
 
 
 .navbar-toggler-icon {
-  background-image: url("https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/FFFFFF/external-world-digital-marketing-and-technology-flatart-icons-outline-flatarticons.png");
+  background-image: url("https://img.icons8.com/ios-filled/50/FFFFFF/menu--v1.png");
+  width: 40px;
+  height: 40px;
 }
 
 .navbar-nav .nav-link:hover {

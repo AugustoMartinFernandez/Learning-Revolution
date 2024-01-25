@@ -232,24 +232,24 @@ document.addEventListener("DOMContentLoaded", function () {
     guardarCarritoEnStorage();
   }
 
-  // Función para actualizar el total del carrito
-  function actualizarTotal() {
-    const total = carrito.reduce(
-      (acc, item) => acc + item.precio * item.cantidad,
-      0
-    );
-    totalCarrito.textContent = `Total: $${formatoNumero(total)}`;
-  }
+// Función para actualizar el total del carrito
+function actualizarTotal() {
+  const total = carrito.reduce(
+    (acc, item) => acc + item.precio * item.cantidad,
+    0
+  );
+  totalCarrito.textContent = `Total: ${formatoMoneda(total)}`;
+}
+// Función para dar formato al número como moneda argentina (ARS)
+function formatoMoneda(monto) {
+  return new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    minimumFractionDigits: 3,
+  }).format(monto);
+}
 
-  // ...
 
-  // Función para dar formato al número con punto y coma invertidos
-  function formatoNumero(numero) {
-    return numero.toLocaleString('es-AR', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    });
-  }
 
   // Función para guardar el carrito en el almacenamiento local
   function guardarCarritoEnStorage() {
