@@ -106,28 +106,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
   </header>
   <div>
     <div id="contador-regresivo"></div>
-    <div style="overflow: hidden;">
-      <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-        style="fill: #0b0404; width: 124%; height: 77px;">
-        <path
-          d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
-          opacity=".25" />
-        <path
-          d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
-          opacity=".5" />
-        <path
-          d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
-      </svg>
-      <h1 class="h1-preg animate__animated animate__backInDown " style="text-align: center;">Cursos Digitales</h1>
-    </div>
   </div>
 
   <!-- /************************** Modal de contenedor de oferta *********************/ -->
   <div id="ofertaModal" class="modal is-centered">
-    <div class="modal-background"></div>
-    <div class="modal-content" style="background-color: #ff6347; padding: 5px; border: 0;">
+    <div class="modal-background" style="background-color: rgba(0, 0, 0, 0.84);"></div>
+    <div class="modal-content" style="background-color: white; padding: 5px; border: 0; margin-top: 100px;">
       <div class="oferta-container">
-        <h2 style="padding-top: 20px; color: #f3f3f3; margin: 0%" class="h1-preg">
+        <h2 style="padding-top: 20px; color: black; margin: 0%" class="h1-preg">
           ¡Oferta Exclusiva!
         </h2>
         <p>
@@ -147,16 +133,16 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         <p class="p-ofer">¡No te pierdas esta oportunidad!</p>
       </div>
     </div>
-    <button id="closeModal" class="modal-close is-large" aria-label="close" style="margin-top: 70px;"></button>
+    <button id="closeModal" class="modal-close is-large" aria-label="close" style="margin-top: 70px; "><img
+        src="https://img.icons8.com/3d-fluency/94/cancel.png" alt=""></button>
   </div>
   <main class="main-tienda">
     <!-- /************************** Carrito *********************/ -->
     <div class="conteneur-unique" style="margin-top: -25px;">
       <div id="modal-panier" class="modal-unique">
         <div class="contenu-modal-unique">
-          <span class="fermer-modal-panier" onclick="fermerPanier()"><img
-              src="https://img.icons8.com/external-creatype-glyph-colourcreatype/64/1A1A1A/external-board-marketplace-glyph-creatype-glyph-colourcreatype-4.png"
-              alt=""></span>
+          <span class="fermer-modal-panier" onclick="fermerPanier()"><img style="height: 40px;"
+              src="https://img.icons8.com/3d-fluency/94/cancel.png" alt=""></span>
           <section class="seccion-carrito container-sm">
             <div id="carrito" class="carrito-container">
               <h1 class="texto" style="text-align: center; padding: 0; font-size: 2rem;">Cursos en el Carrito</h1>
@@ -167,6 +153,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
                 <p id="total-carrito" style="text-align: center;">Total a pagar:</p>
                 <button class="btn btn-primary btn-vaciar-carrito" id="vaciar-carrito" type="button">
                   Vaciar Carrito
+                </button>
+                <button id="finalizar-compra" type="button" class="btn btn-primary btn-vaciar-carritoo is-success">
+                  Finalizar Compra
                 </button>
               </div>
             </div>
@@ -206,9 +195,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
           </svg>
         </span>
         <span class="BG"></span></button></a>
-
-    <div id="modal" class="modal">
-      <div id="modalContent" class="modal-content">
+    <div id="modal" class="modal" style="background-color: rgba(0, 0, 0, 0.895);">
+      <div id="modalContent" class="modal-contentt">
         <span id="closeModalBtn" class="close">&times;</span>
       </div>
     </div>
@@ -248,7 +236,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
 
   </footer>
   <!-- ACA ESTAN TODOS LOS SCRIPT -->
-  <script src="../js/modal.js"></script>
   <script src="../js/carrito.js"></script>
   <script src="../js/carrito-moda.js"></script>
   <script src="../js/modal_oferta.js"></script>
@@ -256,7 +243,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 </html>

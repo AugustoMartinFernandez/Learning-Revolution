@@ -1,20 +1,21 @@
-// Obtenir les éléments du DOM
-const boutonPanier = document.getElementById('bouton-panier');
-const modalPanier = document.getElementById('modal-panier');
+// Obtener elementos del DOM
+const boutonPanier = document.getElementById("bouton-panier");
+const modalPanier = document.getElementById("modal-panier");
 
-// Afficher le modal du panier
-boutonPanier.addEventListener('click', function() {
-    modalPanier.style.display = 'block';
+// Mostrar el modal del carrito al hacer clic en el botón
+boutonPanier.addEventListener("click", function () {
+  modalPanier.style.display = "block";
 });
 
-// Fermer le modal du panier
+// Función para cerrar el modal del carrito
 function fermerPanier() {
-    modalPanier.style.display = 'none';
+  modalPanier.style.display = "none";
 }
 
-// Fermer le modal si on clique à l'extérieur
-window.addEventListener('click', function(event) {
-    if (event.target === modalPanier) {
-        fermerPanier();
-    }
+// Cerrar el modal si se hace clic fuera de él
+window.addEventListener("click", function (event) {
+  // Comprobar si el clic se realizó en el modal del carrito
+  if (event.target === modalPanier) {
+    fermerPanier();
+  }
 });

@@ -7,7 +7,6 @@
 /* Index | Inicio */
 /* body */
 body {
-  font-family: "Bungee Spice", sans-serif;
   font-family: "Merriweather", serif;
   background-color: #ececec;
 }
@@ -416,25 +415,29 @@ p {
 
 .contador {
   display: flex;
-  align-items: center;
-  font-size: 1.8rem;
-  flex-direction: row;
+  font-size: 1.5rem;
   flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: black;
+  width: 250px;
+  flex-direction: row;
   justify-content: center;
-  border-radius: 15px;
+  align-items: center;
+  height: 50px;
 }
 
 /******************************* OFERTA EN TIENDA ********************/
 .oferta-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   background: linear-gradient(0deg,
       rgba(34, 193, 195, 1) 0%,
       rgba(253, 187, 45, 1) 100%);
-  height: 40vh;
+  height: auto;
   margin: 0;
-  background-image: url(https://i.gifer.com/2iiB.gif);
-  background-attachment: local;
-  background-size: cover;
 }
 
 .p-ofer {
@@ -451,6 +454,7 @@ p {
 }
 
 .separador {
+  color: white;
   margin: 5px;
 }
 
@@ -836,6 +840,23 @@ p {
   margin: 10px;
 }
 
+.btn-vaciar-carritoo {
+  background-color: #0b0404;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.btn-vaciar-carritoo:hover {
+  background-color: #cc4c3e;
+}
 /*********************************** Estilos de modal de cursos **************************/
 .modal {
   display: none;
@@ -851,13 +872,24 @@ p {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: black;
   margin: 10% auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
-  max-width: 600px;
+  max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+.modal-contentt {
+  background-color: white;
+  margin: 116px auto;
+  padding: 10px;
+  border: 1px solid #888;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 40px;
 }
 
 .close {
@@ -1007,14 +1039,12 @@ p {
 
 .contenu-modal-unique {
   margin: 5% auto;
-  padding: 20px;
   width: 80%;
 }
 
 .fermer-modal-panier {
-background-image: url('https://img.icons8.com/external-creatype-glyph-colourcreatype/64/1A1A1A/external-board-marketplace-glyph-creatype-glyph-colourcreatype-4.png');
   float: right;
-  font-size: 28px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1036,11 +1066,13 @@ background-image: url('https://img.icons8.com/external-creatype-glyph-colourcrea
   cursor: pointer;
   outline: none;
 }
+
 #bouton-panier:hover {
   filter: brightness(120%);
 
 }
-.carr-mer{
+
+.carr-mer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -1,8 +1,7 @@
 /*Grafico de Lenguajes de programacion*/
 let datos = {
   labels: ["2019", "2020", "2021", "2022", "2023"],
-  datasets: [
-    {
+  datasets: [{
       label: "JavaScript",
       data: [100, 120, 150, 180, 200],
       backgroundColor: "#F7DF1E", // Color de fondo
@@ -97,8 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Datos de ejemplo (reemplaza esto con tus propios datos)
   let datosDesarrolladores = {
     labels: ["2019", "2020", "2021", "2022", "2023"],
-    datasets: [
-      {
+    datasets: [{
         label: "Desarrolladores Web",
         data: [1200000, 1500000, 1800000, 2000000, 2200000],
         backgroundColor: "rgba(75, 192, 192, 0.5)",
@@ -145,21 +143,19 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       annotation: {
-        annotations: [
-          {
-            type: "line",
-            mode: "horizontal",
-            scaleID: "y",
-            value: 1500000,
-            borderColor: "rgba(255, 99, 132, 0.7)",
-            borderWidth: 2,
-            label: {
-              content: "Línea de referencia",
-              enabled: true,
-              position: "right",
-            },
+        annotations: [{
+          type: "line",
+          mode: "horizontal",
+          scaleID: "y",
+          value: 1500000,
+          borderColor: "rgba(255, 99, 132, 0.7)",
+          borderWidth: 2,
+          label: {
+            content: "Línea de referencia",
+            enabled: true,
+            position: "right",
           },
-        ],
+        }, ],
       },
     },
   };
@@ -207,8 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "Nov 2023",
       "Dic 2023",
     ],
-    datasets: [
-      {
+    datasets: [{
         label: "Sueldo Promedio Desarrolladores ($)",
         data: [
           40000, 57000, 66000, 46000, 72000, 78000, 80000, 86000, 89000, 70000,
@@ -280,5 +275,3 @@ document.addEventListener("DOMContentLoaded", function () {
     options: opcionesSueldosMensuales,
   });
 });
-
-
