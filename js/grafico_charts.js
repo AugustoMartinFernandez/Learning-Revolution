@@ -96,7 +96,7 @@ let graficoPersonasPorAno = new Chart(ctx, {
 document.addEventListener("DOMContentLoaded", function () {
   // Datos de ejemplo (reemplaza esto con tus propios datos)
   let datosDesarrolladores = {
-    labels: ["2018", "2019", "2020", "2021", "2022"],
+    labels: ["2019", "2020", "2021", "2022", "2023"],
     datasets: [
       {
         label: "Desarrolladores Web",

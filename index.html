@@ -38,7 +38,7 @@ https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a href="../index.html">
+        <a href="../index.html" class="iconos-nav">
           <img style="
                 width: 50px;
                 height: 40px;
@@ -51,52 +51,51 @@ https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Incio</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="./index.html">Incio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./pages/acerca.html">Acerca de</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="./pages/acerca.html">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./pages/preguntas.html">Preguntas</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="./pages/preguntas.html">Preguntas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./pages/tienda.html">Tienda</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="./pages/tienda.html">Tienda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./pages/testimonios.html">Testimonios</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="./pages/testimonios.html">Testimonios</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle iconos-nav" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Mas
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="https://augustomartinfernandez.github.io/Web-Presupuestos/"
+                  <a class="dropdown-item iconos-nav" href="https://augustomartinfernandez.github.io/Web-Presupuestos/"
                     target="_blank">Conoce tu presupuesto</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" target="_blank"
+                  <a class="dropdown-item iconos-nav" target="_blank"
                     href="https://augustomartinfernandez.github.io/Portafolio-Web/">Quieres tu Pagina?</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  <a class="dropdown-item" target="_blank" href="https://link.mercadopago.com.ar/martindesarrolloweb">Tu
+                  <a class="dropdown-item iconos-nav" target="_blank" href="https://link.mercadopago.com.ar/martindesarrolloweb">Tu
                     colaboracion</a>
                 </li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar Curso" aria-label="Buscar Curso" />
-            <button class="btn btn-outline-success" type="submit">
-              Buscar
-            </button>
-          </form>
+          <div class="iconos-nav" style="padding: 2px;
+          margin-right: 20px;">
+          <a target="_blank" href="https://link.mercadopago.com.ar/martindesarrolloweb"><img
+                width="44" height="44" src="https://img.icons8.com/color/48/mercado-pago.png" alt="mercado-pago" /></a>
+          </div>
         </div>
       </div>
     </nav>
@@ -114,9 +113,10 @@ https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
         </p>
       </div>
     </div>
-    <div class="cont-carrusel d-lg-none d-md-none" style="padding: 30px">
-      <div id="carouselExample" class="carousel slide testimonials d-lg-none d-md-none" style="max-width: 600px">
-        <div class="carousel-inner testimonial-container">
+    <div class="custom-carousel-container d-lg-none d-md-none" style="padding: 30px">
+      <div id="custom-carousel" class="carousel slide testimonials-carousel d-lg-none d-md-none"
+        style="max-width: 600px">
+        <div class="carousel-inner custom-testimonial-container">
           <div class="carousel-item testimonial active">
             <div class="course">
               <img src="./images/Cursotrading.png" class="d-block mx-auto w-100" alt="..." />
@@ -178,16 +178,17 @@ https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#custom-carousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#custom-carousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </div>
+
   </main>
 
   <footer class="footer">
@@ -202,18 +203,14 @@ https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
         </p>
         <div>
           <ul class="list-inline footer-social">
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/thelearningrevolution" target="_blank"><img class="img" width="48"
-                  height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img class="img" width="48"
-                  height="48" src="https://img.icons8.com/color/48/facebook.png" alt="facebook" /></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="mailto:info@thelearningrevolution.com"><img class="img" width="48" height="48"
-                  src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a>
-            </li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/thelearningrevolution"
+                target="_blank"><img class="img iconos-nav" width="48" height="48"
+                  src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img
+                  class="img iconos-nav" width="48" height="48" src="https://img.icons8.com/color/48/facebook.png"
+                  alt="facebook" /></a></li>
+            <li class="list-inline-item"><a href="mailto:info@thelearningrevolution.com"><img class="img iconos-nav" width="48"
+                  height="48" src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a></li>
           </ul>
         </div>
       </div>
@@ -228,7 +225,7 @@ https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
   <script src="./js/modal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 </html>

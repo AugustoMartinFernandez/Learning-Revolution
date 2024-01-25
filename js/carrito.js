@@ -587,4 +587,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderizarCursos();
   cargarCarritoDesdeStorage();
-});
+}); 
+
+
+
+

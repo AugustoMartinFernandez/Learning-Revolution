@@ -37,7 +37,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a href="../index.html">
+        <a href="../index.html" class="iconos-nav">
           <img style="
                 width: 50px;
                 height: 40px;
@@ -52,48 +52,54 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Incio</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="../index.html">Incio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../pages/acerca.html">Acerca de</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="../pages/acerca.html">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../pages/preguntas.html">Preguntas</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="../pages/preguntas.html">Preguntas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../pages/tienda.html">Tienda</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="../pages/tienda.html">Tienda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../pages/testimonios.html">Testimonios</a>
+              <a class="nav-link active iconos-nav" aria-current="page" href="../pages/testimonios.html">Testimonios</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle iconos-nav" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Mas
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="https://augustomartinfernandez.github.io/Web-Presupuestos/"
+                  <a class="dropdown-item iconos-nav" href="https://augustomartinfernandez.github.io/Web-Presupuestos/"
                     target="_blank">Conoce tu presupuesto</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" target="_blank"
+                  <a class="dropdown-item iconos-nav" target="_blank"
                     href="https://augustomartinfernandez.github.io/Portafolio-Web/">Quieres tu Pagina?</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
-                <li><a class="dropdown-item" target="_blank"
+                <li><a class="dropdown-item iconos-nav" target="_blank"
                     href="https://link.mercadopago.com.ar/martindesarrolloweb">Tu colaboracion</a></li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar Curso" aria-label="Buscar Curso" />
-            <button class="btn btn-outline-success" type="submit">
-              Buscar
+          <div class="carr-mer">
+            <div class="iconos-nav" style="padding: 2px;
+            margin-right: 20px;"><a target="_blank" href="https://link.mercadopago.com.ar/martindesarrolloweb"><img
+                  width="44" height="44" src="https://img.icons8.com/color/48/mercado-pago.png"
+                  alt="mercado-pago" /></a>
+            </div>
+            <button id="bouton-panier">
+              <img class="iconos-nav" style="padding: 2px;
+              margin-right: 20px;" width="48" height="38"
+                src="https://img.icons8.com/windows/32/FFFFFF/shopping-cart.png" alt="shopping-cart-emoji" />
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </nav>
@@ -112,11 +118,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         <path
           d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
       </svg>
-      <h1 class="h1-preg animate__animated animate__backInDown " style="text-align: center;">Bienvenidos a nuestra
-        Tienda !!
-      </h1>
+      <h1 class="h1-preg animate__animated animate__backInDown " style="text-align: center;">Cursos Digitales</h1>
     </div>
   </div>
+
+  <!-- /************************** Modal de contenedor de oferta *********************/ -->
   <div id="ofertaModal" class="modal is-centered">
     <div class="modal-background"></div>
     <div class="modal-content" style="background-color: #ff6347; padding: 5px; border: 0;">
@@ -144,22 +150,31 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
     <button id="closeModal" class="modal-close is-large" aria-label="close" style="margin-top: 70px;"></button>
   </div>
   <main class="main-tienda">
-    <section class="seccion-carrito container-sm">
-      <!-- Sección de Carrito -->
-      <div id="carrito" class="carrito-container ">
-        <h1 class="texto" style="text-align: center; padding: 0; font-size: 2rem;">Cursos en el Carrito</h1>
-        <div class="carro" style="margin: 20px;">
-          <ul id="lista-carrito"></ul>
-        </div>
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <p id="total-carrito" style="text-align: center;">Total a pagar:</p>
-          <button class="btn btn-primary btn-vaciar-carrito" id="vaciar-carrito" type="button">
-            Vaciar Carrito
-          </button>
+    <!-- /************************** Carrito *********************/ -->
+    <div class="conteneur-unique" style="margin-top: -25px;">
+      <div id="modal-panier" class="modal-unique">
+        <div class="contenu-modal-unique">
+          <span class="fermer-modal-panier" onclick="fermerPanier()"><img
+              src="https://img.icons8.com/external-creatype-glyph-colourcreatype/64/1A1A1A/external-board-marketplace-glyph-creatype-glyph-colourcreatype-4.png"
+              alt=""></span>
+          <section class="seccion-carrito container-sm">
+            <div id="carrito" class="carrito-container">
+              <h1 class="texto" style="text-align: center; padding: 0; font-size: 2rem;">Cursos en el Carrito</h1>
+              <div class="carro" style="margin: 20px;">
+                <ul id="lista-carrito"></ul>
+              </div>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <p id="total-carrito" style="text-align: center;">Total a pagar:</p>
+                <button class="btn btn-primary btn-vaciar-carrito" id="vaciar-carrito" type="button">
+                  Vaciar Carrito
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
-
+    </div>
+    <!-- /************************** CURSOS *********************/ -->
     <div class="curso-container" id="contenedor">
       <div id="contenedor-cursos">
         <div class="curso-card" data-curso="curso-desarrollo-web">
@@ -177,17 +192,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         </div>
       </div>
     </div>
-
     <div id="contenedor" class="curso-container"></div>
 
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeModalBtn">&times;</span>
-        <div id="modalContent"></div>
-      </div>
-    </div>
-
-    <!-- Tu botón flotante -->
+    <!-- /************************** BOTON DE WHATSAPP *********************/ -->
     <a href="https://wa.me/3815949243" target="_blank">
       <button class="Btn animate__animated animate__rubberBand Btn animated" style="height: 40px; width: 40px"
         id="floatingButton">
@@ -200,6 +207,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         </span>
         <span class="BG"></span></button></a>
 
+    <div id="modal" class="modal">
+      <div id="modalContent" class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+      </div>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -216,18 +228,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         </p>
         <div>
           <ul class="list-inline footer-social">
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/thelearningrevolution" target="_blank"><img class="img" width="48"
-                  height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img class="img" width="48"
-                  height="48" src="https://img.icons8.com/color/48/facebook.png" alt="facebook" /></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="mailto:info@thelearningrevolution.com"><img class="img" width="48" height="48"
-                  src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a>
-            </li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/thelearningrevolution" target="_blank"><img
+                  class="img iconos-nav" width="48" height="48"
+                  src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img
+                  class="img iconos-nav" width="48" height="48" src="https://img.icons8.com/color/48/facebook.png"
+                  alt="facebook" /></a></li>
+            <li class="list-inline-item"><a href="mailto:info@thelearningrevolution.com"><img class="img iconos-nav"
+                  width="48" height="48" src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a></li>
           </ul>
         </div>
       </div>
@@ -240,10 +248,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
 
   </footer>
   <!-- ACA ESTAN TODOS LOS SCRIPT -->
-  <!-- <script src="../js/simulador.js"></script> -->
   <script src="../js/modal.js"></script>
   <script src="../js/carrito.js"></script>
-  <!-- <script src="../js/cuentaregresiva.js"></script> -->
+  <script src="../js/carrito-moda.js"></script>
   <script src="../js/modal_oferta.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

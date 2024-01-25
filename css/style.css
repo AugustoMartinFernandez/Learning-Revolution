@@ -14,7 +14,7 @@ body {
 
 /* Img de portada */
 .img-portada {
-  background: linear-gradient(to right, #d8d1079e, #64059b9f),
+  background: linear-gradient(to right, #d8d1075a, #64059b5a),
     url(../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -96,18 +96,13 @@ strong {
   color: #f3f3f3;
 }
 
-.navbar-toggler {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
 
 .navbar-toggler-icon {
-  background-image: url("https://img.icons8.com/ios-filled/50/FFFFFF/user-menu-male.png");
+  background-image: url("https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/FFFFFF/external-world-digital-marketing-and-technology-flatart-icons-outline-flatarticons.png");
 }
 
 .navbar-nav .nav-link:hover {
   background: linear-gradient(to right, #f1ea07, #9812e6);
-  /* Gradient de dos colores al pasar el cursor */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -265,49 +260,64 @@ p {
 
 /* Estilos para la sección de testimonios */
 /* Estilos generales para la sección de testimonios */
-.testimonials-section {
+.testimonialls-section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 20px auto;
   flex-direction: row;
 }
+
 /* Estilos para cada tarjeta de testimonio */
-.testimonial {
+.testimoniall {
   background-color: #fff;
   max-width: 330px;
   margin: 30px;
   padding: 15px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transition: transform 0.3s ease-in-out;
 }
-.testimonial:hover {
+
+.testimoniall:hover {
   transform: scale(1.05);
 }
+
+.iconos-nav {
+  transition: transform 0.4s ease-in-out;
+}
+
+.iconos-nav:hover {
+  transform: scale(1.07);
+}
+
 /* Estilos para la imagen dentro de la tarjeta */
-.testimonial img {
+.testimoniall img {
   width: 100%;
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
 /* Estilos para el texto del testimonio */
-.testimonial-text {
+.testimoniall-text {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
+
 /* Estilos para el autor del testimonio */
-.testimonial-author {
+.testimoniall-author {
   font-style: italic;
   font-size: 12px;
   color: #555;
 }
+
 /* Estilos para la transición de la tarjeta al hacer hover */
-.testimonial:hover {
+.testimoniall:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .category {
   text-transform: uppercase;
   font-size: 0.7em;
@@ -709,16 +719,20 @@ p {
 .curso-card {
   position: relative;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 8px;
   width: 300px;
   margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.curso-card:hover {
+  transform: scale(1.05);
 }
 
 .bg-image {
   position: relative;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 10px;
 }
 
@@ -751,7 +765,7 @@ p {
 
 .original-price {
   text-decoration: line-through;
-  color: #888;
+  color: #ff6347;
 }
 
 /************************************************ Seccion Carrito *******************************************/
@@ -765,8 +779,8 @@ p {
 .carrito-container {
   border: 2px solid #ff6347;
   border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
   max-width: 600px;
   width: 100%;
   background: linear-gradient(to right, #b0ab0862, #4b057375),
@@ -778,7 +792,7 @@ p {
 }
 
 .carro {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #lista-carrito {
@@ -974,4 +988,61 @@ p {
 
 .btn-success:hover {
   background-color: #bc3020;
+}
+
+
+
+.conteneur-unique {
+  text-align: center;
+  padding: 20px;
+}
+
+.modal-unique {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contenu-modal-unique {
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.fermer-modal-panier {
+background-image: url('https://img.icons8.com/external-creatype-glyph-colourcreatype/64/1A1A1A/external-board-marketplace-glyph-creatype-glyph-colourcreatype-4.png');
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fermer-modal-panier:hover,
+.fermer-modal-panier:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#bouton-panier img {
+  vertical-align: middle;
+}
+
+#bouton-panier {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+#bouton-panier:hover {
+  filter: brightness(120%);
+
+}
+.carr-mer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
