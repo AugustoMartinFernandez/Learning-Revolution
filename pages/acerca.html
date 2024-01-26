@@ -19,6 +19,7 @@
     content="Descubre quiénes somos y cómo The Learning Revolution ofrece cursos digitales de alta calidad.">
   <meta name="keywords" content="The Learning Revolution, cursos digitales, educación en línea, aprender en línea">
   <meta name="author" content="The Learning Revolution">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="
   https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
@@ -75,8 +76,9 @@
                 Mas
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item iconos-nav" href="https://augustomartinfernandez.github.io/Web-Presupuestos/"
-                    target="_blank">Conoce tu presupuesto</a></li>
+                <li><a class="dropdown-item iconos-nav"
+                    href="https://augustomartinfernandez.github.io/Web-Presupuestos/" target="_blank">Conoce tu
+                    presupuesto</a></li>
                 <li><a class="dropdown-item iconos-nav" target="_blank"
                     href="https://augustomartinfernandez.github.io/Portafolio-Web/">Quieres tu Pagina?</a></li>
                 <li>
@@ -134,6 +136,39 @@
         </p>
       </div>
     </div>
+    <section class="playy">
+      <form id="form" class="custom-form">
+        <div class="field">
+          <label for="name">Nombre:</label>
+          <input type="text" name="name" id="name" placeholder="Ingrese su nombre" required>
+        </div>
+        <div class="field">
+          <label for="last">Apellido:</label>
+          <input type="text" name="last" id="last" placeholder="Ingrese su apellido" required>
+        </div>
+        <div class="field">
+          <label for="phone">Teléfono:</label>
+          <input type="text" name="phone" id="phone" placeholder="Ingrese su teléfono" required>
+        </div>
+        <div class="field">
+          <label for="email">Correo Electrónico:</label>
+          <input type="text" name="email" id="email" placeholder="Ingrese su correo electrónico" required>
+        </div>
+        <div class="field">
+          <label for="message">Mensaje:</label>
+          <textarea name="message" id="message" placeholder="Escriba su mensaje aquí" required></textarea>
+        </div>
+        <div class="field">
+          <label for="reply_to">Responder a:</label>
+          <input type="text" name="reply_to" id="reply_to" placeholder="Ingrese su dirección de correo para respuestas" required>
+        </div>
+        <input type="submit" id="button" class="btn-vaciar-carrito btn-agregar-carrito" value="Enviar Formulario">
+      </form>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+        emailjs.init('Wa_58ii1rp4mIx6dk')
+      </script>
+    </section>
     <hr class="d-block d-lg-none">
     <h2 class="h1-preg  d-lg-none " style="text-align: center; font-size: 28px; margin-bottom: 20px;">Que es la
       Revolución del Aprendizaje?</h2>
@@ -151,36 +186,7 @@
         </div>
       </figure>
     </div>
-    <section class="section-form">
-
-      <form action="procesar_formulario.php" method="POST" class="unique-form">
-        <!-- Cambia "procesar_formulario.php" al script que manejará los datos del formulario -->
-        <h2 class="h1-preg " style="text-align: center; margin: 20px; font-size: 1.8rem; margin-bottom: 30px;">
-          Formulario de Opinión</h2>
-        <label for="nombre" class="unique-label">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required class="unique-input">
-
-        <label for="correo" class="unique-label">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo" required class="unique-input">
-
-        <label for="telefono" class="unique-label">Número de Celular:</label>
-        <input type="tel" id="telefono" name="telefono" required class="unique-input">
-
-        <label class="unique-label"> Dejanos tus Comentarios:</label>
-        <textarea id="comentarios" name="comentarios" rows="2" required class="unique-textarea"></textarea>
-
-        <label class="unique-label">¿Desea recibir una respuesta?</label>
-        <div class="unique-options">
-          <label><input type="radio" name="respuesta" value="si" class="unique-radio"> Sí</label>
-          <label><input type="radio" name="respuesta" value="no" class="unique-radio"> No</label>
-        </div>
-        <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 17px;">
-          <button type="submit" class="btn-vaciar-carrito">Enviar Opinión</button>
-        </div>
-      </form>
-    </section>
   </main>
-
 
   <footer class="footer">
     <div class="container">
@@ -201,8 +207,9 @@
               <li class="list-inline-item"><a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img
                     class="img iconos-nav" width="48" height="48" src="https://img.icons8.com/color/48/facebook.png"
                     alt="facebook" /></a></li>
-              <li class="list-inline-item"><a href="mailto:info@thelearningrevolution.com"><img class="img iconos-nav" width="48"
-                    height="48" src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a></li>
+              <li class="list-inline-item"><a href="mailto:info@thelearningrevolution.com"><img class="img iconos-nav"
+                    width="48" height="48" src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -213,6 +220,8 @@
         </div>
       </div>
   </footer>
+  <script src="../js/form.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
