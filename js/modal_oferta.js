@@ -1,5 +1,6 @@
 // Espera a que el documento HTML esté completamente cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", function () {
+
   // Establece la fecha límite de la oferta al 2 de enero de 2024 a las 23:59:59
   const fechaLimiteOferta = new Date(2024, 1, 2, 23, 59, 59);
 
@@ -36,10 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function abrirModal() {
     // Añade la clase 'is-active' al modal para mostrarlo
     document.getElementById("ofertaModal").classList.add("is-active");
-    // Establece un intervalo para llamar a la función actualizarTemporizador cada segundo
-    setInterval(actualizarTemporizador, 1000);
-    // Cierra automáticamente el modal después de 4 segundos
-    setTimeout(cerrarModal, 4000);
   }
 
   // Función para cerrar el modal de oferta
@@ -51,6 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Llama a la función abrirModal para iniciar el proceso
   abrirModal();
 
+  // Actualiza el temporizador inmediatamente después de abrir el modal
+  actualizarTemporizador();
+
+  // Actualiza el temporizador cada segundo
+  setInterval(actualizarTemporizador, 1000);
+
+  // Agrega un evento de clic al modal para cerrarlo
+  document.getElementById("ofertaModal").addEventListener("click", function(event) {
+    // Si el clic ocurre dentro del contenido del modal, no lo cerramos
+    if (!event.target.closest('.modal-content')) return;
+    cerrarModal();
+  });
+
   // Agrega un evento de clic al botón de cerrar modal para llamar a la función cerrarModal
   document.getElementById("closeModal").addEventListener("click", cerrarModal);
 });
+

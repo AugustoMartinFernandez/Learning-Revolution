@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let cursos = [{
       nombre: "Cursos completo de Trading desde 0",
       imagen: "../images/Cursotrading.png",
-      precioOriginal: "$7.000,00",
+      precioOriginal: "$9.000,00",
       precioOferta: "$2.000,00",
       contenido: `
         <h2>Trading desde 0 - Curso Completo</h2>
@@ -23,13 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
       precioOriginal: "$9.000,00",
       precioOferta: "$5.500,00",
       contenido: `
-        <h2>Desarrollo Web - Curso Completo</h2>
-        <p>Conviértete en un desarrollador web profesional con este completo paquete de cursos que abarca desde HTML y CSS hasta frameworks avanzados.</p>
+        <h2>Desarrollo Web</h2>
+        <p>Conviértete en un desarrollador web profesional con este curso completo + paquete de cursos.</p>
         <ul>
           <li><strong>✓</strong> HTML y CSS desde cero</li>
-          <li><strong>✓</strong> JavaScript y jQuery</li>
-          <li><strong>✓</strong> Frameworks populares (React, Angular, Vue)</li>
-          <li><strong>✓</strong> Desarrollo backend con Node.js y Express</li>
+          <li><strong>✓</strong> Git + Github</li>
+          <li><strong>✓</strong> Sass</li>
+          <li><strong>✓</strong> Frameworks CSS + Bootstrap</li>
+          <li><strong>✓</strong> Animaciones</li>
+          <li><strong>✓</strong> SEO y buenas prácticas</li>
+          <li><strong>✓</strong> Servidores: tu sitio en línea</li>
+          <li><strong>✓</strong> Conociendo a nuestro cliente</li>
         </ul>
       `,
     },
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       precioOriginal: "$5.000,00",
       precioOferta: "$2.000,00",
       contenido: `
-        <h2>Cursos de Hosting y Administración de Servidores</h2>
+        <h2>Cursos de Hosting</h2>
         <p>Aprende a administrar servidores y a utilizar servicios de hosting con los cursos especializados de Hostinger.</p>
         <ul>
           <li><strong>✓</strong> Configuración de servidores Linux</li>
@@ -52,26 +56,39 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       nombre: " Curso de Programacion en JavaScript",
       imagen: "../images/javascript.png",
-      precioOriginal: "$10.000,00",
-      precioOferta: "$4.000,00",
+      precioOriginal: "$15.000,00",
+      precioOferta: "$6.000,00",
       contenido: `
-        <h2>JavaScript - Dominando el Lenguaje</h2>
-        <p>Este paquete de cursos te llevará desde los conceptos básicos de JavaScript hasta las últimas tendencias y técnicas de desarrollo frontend y backend.</p>
+        <h2>JavaScript </h2>
+        <p>Este paquete de cursos te llevará desde los conceptos básicos de JavaScript hasta las últimas tendencias.</p>
         <ul>
-          <li><strong>✓</strong> Fundamentos de JavaScript</li>
-          <li><strong>✓</strong> Frameworks y bibliotecas modernas (React, Angular, Node.js)</li>
-          <li><strong>✓</strong> Desarrollo de aplicaciones web interactivas</li>
-          <li><strong>✓</strong> Pruebas y optimización de rendimiento</li>
+          <li><strong>✓</strong> Introducción a JavaScript</li>
+          <li><strong>✓</strong> Conceptos generales: Sintaxis y variables</li>
+          <li><strong>✓</strong> Control de flujos</li>
+          <li><strong>✓</strong> Ciclos e iteraciones</li>
+          <li><strong>✓</strong> Funciones</li>
+          <li><strong>✓</strong> Objetos</li>
+          <li><strong>✓</strong> Arrays</li>
+          <li><strong>✓</strong> Funciones de orden superior</li>
+          <li><strong>✓</strong> DOM</li>
+          <li><strong>✓</strong> Eventos</li>
+          <li><strong>✓</strong> Storage & JSON</li>
+          <li><strong>✓</strong> Operadores avanzados I</li>
+          <li><strong>✓</strong> Operadores Avanzados II + Workshop</li>
+          <li><strong>✓</strong> Librerías</li>
+          <li><strong>✓</strong> Asincronía y promesas</li>
+          <li><strong>✓</strong> Ajax & Fetch</li>
+          <li><strong>✓</strong> Frameworks & NodeJS</li>
         </ul>
       `,
     },
     {
       nombre: " Curso de Programacion en Python",
       imagen: "../images/python.png",
-      precioOriginal: "$10.000,00",
-      precioOferta: "$4.000,00",
+      precioOriginal: "$15.000,00",
+      precioOferta: "$4.600,00",
       contenido: `
-        <h2>Programación en Python - Curso Avanzado</h2>
+        <h2>Programación en Python Curso Avanzado</h2>
         <p>Explora las capacidades de Python para desarrollo web, análisis de datos, inteligencia artificial y más con este completo paquete de cursos.</p>
         <ul>
           <li><strong>⇒</strong> Desarrollo web con Django y Flask</li>
@@ -81,6 +98,39 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
       `,
     },
+    {
+      nombre: " Curso de Marketing Digital",
+      imagen: "../images/MarketingDigital.png",
+      precioOriginal: "$7.000,00",
+      precioOferta: "$3.500,00",
+      contenido: `
+      <h2>Marketing Digital</h2>
+      <p>Descubre las estrategias más efectivas en marketing digital y maximiza el potencial de tu negocio en línea con este completo paquete de cursos.</p>
+      <ul>
+        <li><strong>⇒</strong> Optimización de motores de búsqueda (SEO) para aumentar la visibilidad en línea</li>
+        <li><strong>⇒</strong> Publicidad en redes sociales para llegar a tu audiencia objetivo de manera efectiva</li>
+        <li><strong>⇒</strong> Email marketing: estrategias para construir relaciones sólidas con tus suscriptores</li>
+        <li><strong>⇒</strong> Analítica web: utiliza datos para tomar decisiones informadas y mejorar el rendimiento de tu sitio</li>
+      </ul>
+      `,
+    },
+    {
+      nombre: " Curso de Ciberseguridad Completo",
+      imagen: "../images/2.png",
+      precioOriginal: "$10.000,00",
+      precioOferta: "$4.000,00",
+      contenido: `
+      <h2>Ciberseguridad</h2>
+      <p>Sumérgete en el fascinante mundo de la ciberseguridad y aprende las técnicas más avanzadas para proteger tus sistemas y datos contra amenazas cibernéticas.</p>
+      <ul>
+        <li><strong>⇒</strong> Ethical Hacking: descubre cómo piensan los hackers y cómo puedes defender tus sistemas</li>
+        <li><strong>⇒</strong> Protección de datos: técnicas para asegurar la confidencialidad e integridad de la información</li>
+        <li><strong>⇒</strong> Análisis de vulnerabilidades: identifica y mitiga posibles puntos de acceso para evitar ataques</li>
+        <li><strong>⇒</strong> Gestión de incidentes de seguridad: cómo responder eficazmente a brechas de seguridad y ataques cibernéticos</li>
+      </ul>
+      
+      `,
+    }
   ];
 
   // Elementos del DOM
@@ -333,36 +383,40 @@ function formatoMoneda(monto) {
   });
 
 
-  // Función para finalizar la compra
-  function finalizarCompra() {
-    const swalWithBootstrapButtons = Swal.mixin({
-      customClass: {
-        confirmButton: "btn btn-success",
-        cancelButton: "btn btn-danger",
-      },
-      buttonsStyling: false,
-    });
+ // Función para finalizar la compra
+function finalizarCompra() {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger",
+    },
+    buttonsStyling: false,
+  });
 
-    swalWithBootstrapButtons
-      .fire({
-        title: "¿Finalizar compra?",
-        icon: "question",
-        showCancelButton: true,
-        confirmButtonText: "Sí",
-        cancelButtonText: "No",
-        reverseButtons: true,
-      })
-      .then((result) => {
-        if (result.isConfirmed) {
-          // Lógica para finalizar la compra
-          swalWithBootstrapButtons.fire({
-            title: "Compra exitosa",
-            text: "¡Gracias por tu compra!",
-            icon: "success",
-          });
-        }
-      });
-  }
+  swalWithBootstrapButtons
+    .fire({
+      title: "¿Finalizar compra?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Sí",
+      cancelButtonText: "No",
+      reverseButtons: true,
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        // Lógica para finalizar la compra
+
+        // Limpiar el carrito después de la compra
+        vaciarCarrito();
+
+        swalWithBootstrapButtons.fire({
+          title: "Compra exitosa",
+          text: "¡Gracias por tu compra!",
+          icon: "success",
+        });
+      }
+    });
+}
 
   // Agrega un evento de clic al botón de vaciar carrito para confirmar la acción
   document
