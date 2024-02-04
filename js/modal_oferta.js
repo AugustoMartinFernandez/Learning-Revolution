@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // Establece la fecha límite de la oferta al 2 de enero de 2024 a las 23:59:59
-  const fechaLimiteOferta = new Date(2024, 1, 2, 23, 59, 59);
+  const fechaLimiteOferta = new Date(2024, 1, 14, 23, 59, 59);
 
   // Función para actualizar el temporizador que muestra el tiempo restante
   function actualizarTemporizador() {
