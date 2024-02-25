@@ -117,25 +117,26 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
           ¡Oferta Exclusiva!
         </h2>
         <p class="p-ofer">
-          ¡Compra 3 cursos por solo <strong>5,000 ARS!</strong> <br> Ofertas
+          ¡Compra 3 cursos por solo <strong>6,000 ARS!</strong> <br> Ofertas
           imperdibles <strong>hasta</strong>:
         </p>
         <div class="contador">
-          <div id="dias" class="unidad">00</div>
-          <div class="separador">D</div>
-          <div id="horas" class="unidad">00</div>
-          <div class="separador">H</div>
-          <div id="minutos" class="unidad">00</div>
-          <div class="separador">M</div>
-          <div id="segundos" class="unidad">00</div>
-          <div class="separador">S</div>
-        </div> 
-        <p class="p-ofer">¡No te pierdas esta unica oportunidad!</p>
+          <div id="dias" class="unidad" style="width: 30px;">00</div>
+          <div class="separador" style="width: 15px;">D</div>
+          <div id="horas" class="unidad" style="width: 30px;">00</div>
+          <div class="separador" style="width: 15px;">H</div>
+          <div id="minutos" class="unidad" style="width: 30px;">00</div>
+          <div class="separador" style="width: 15px;">M</div>
+          <div id="segundos" class="unidad" style="width: 30px;">00</div>
+          <div class="separador" style="width: 15px;">S</div>
+        </div>
+        <p class="p-ofer" style="margin-bottom: 10px;">¡No te pierdas esta única oportunidad!</p>
       </div>
     </div>
     <button id="closeModal" class="modal-close is-large" aria-label="close" style="margin-top: 70px; "><img
         src="https://img.icons8.com/3d-fluency/94/cancel.png" alt=""></button>
   </div>
+
   <main class="main-tienda">
     <!-- /************************** Carrito *********************/ -->
     <div class="conteneur-unique" style="margin-top: -25px;">
@@ -145,7 +146,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
               src="https://img.icons8.com/3d-fluency/94/cancel.png" alt=""></span>
           <section class="seccion-carrito container-sm">
             <div id="carrito" class="carrito-container">
-              <h1 class="texto" style="text-align: center; padding: 0; font-size: 2rem;">Cursos en el Carrito</h1>
+              <h1 class="texto" style="text-align: center; padding: 0; font-size: 2rem;">Atencion!! Carrito en
+                Mantenimiento!.</h1>
               <div class="carro" style="margin: 20px;">
                 <ul id="lista-carrito"></ul>
               </div>
@@ -185,7 +187,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
 
     <!-- /************************** BOTON DE WHATSAPP *********************/ -->
     <a href="https://wa.me/3815949243" target="_blank">
-      <button  class="Btn animate__animated animate__rubberBand Btn animated" style="height: 40px; width: 40px"
+      <button class="Btn animate__animated animate__rubberBand Btn animated" style="height: 40px; width: 40px"
         id="floatingButton">
         <span class="svgContainer">
           <svg viewBox="0 0 448 512" fill="white" height="1.6em" xmlns="http://www.w3.org/2000/svg">
@@ -216,14 +218,16 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
         </p>
         <div>
           <ul class="list-inline footer-social">
-            <li class="list-inline-item"><a href="https://www.instagram.com/martinn_fernandeez"
-                target="_blank"><img class="img iconos-nav" width="48" height="48"
+            <li class="list-inline-item"><a href="https://www.instagram.com/martinn_fernandeez" target="_blank"><img
+                  class="img iconos-nav" width="48" height="48"
                   src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a></li>
             <li class="list-inline-item"><a href="https://www.facebook.com/TheLearningRevolution" target="_blank"><img
                   class="img iconos-nav" width="48" height="48" src="https://img.icons8.com/color/48/facebook.png"
                   alt="facebook" /></a></li>
-            <li class="list-inline-item"><a  href="https://mail.google.com/mail/?view=cm&to=cursosdigitalesrevolution@gmail.com" target="_blank"><img class="img iconos-nav" width="48"
-                  height="48" src="https://img.icons8.com/color/48/gmail--v1.png" alt="gmail--v1" /></a></li>
+            <li class="list-inline-item"><a
+                href="https://mail.google.com/mail/?view=cm&to=cursosdigitalesrevolution@gmail.com" target="_blank"><img
+                  class="img iconos-nav" width="48" height="48" src="https://img.icons8.com/color/48/gmail--v1.png"
+                  alt="gmail--v1" /></a></li>
           </ul>
         </div>
       </div>
@@ -238,12 +242,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css
   <!-- ACA ESTAN TODOS LOS SCRIPT -->
   <script src="../js/carrito.js"></script>
   <script src="../js/carrito-moda.js"></script>
+  <script src="../js/cuentaregresiva.js"></script>
   <script src="../js/modal_oferta.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
+  </script>
 </body>
 
 </html>

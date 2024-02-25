@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Cursos completo de Trading desde 0",
       imagen: "../images/Cursotrading.png",
       precioOriginal: "$9.000,00",
-      precioOferta: "$2.000,00",
+      precioOferta: "$4.000,00",
       contenido: `
         <h2>Trading desde 0 - Curso Completo</h2>
         <p>Este curso te enseñará los fundamentos del trading, desde análisis técnico hasta estrategias avanzadas de gestión de riesgos.</p>
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       nombre: "Curso completo de Desarrollo Web",
       imagen: "../images/Desarrolloweb.png",
-      precioOriginal: "$9.000,00",
+      precioOriginal: "$15.000,00",
       precioOferta: "$5.500,00",
       contenido: `
         <h2>Desarrollo Web</h2>
@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       nombre: "Curso completo de Hostinger",
       imagen: "../images/hostinger.png",
-      precioOriginal: "$5.000,00",
-      precioOferta: "$2.000,00",
+      precioOriginal: "$8.000,00",
+      precioOferta: "$4.500,00",
       contenido: `
         <h2>Cursos de Hosting</h2>
         <p>Aprende a administrar servidores y a utilizar servicios de hosting con los cursos especializados de Hostinger.</p>
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: " Curso de Programacion en JavaScript",
       imagen: "../images/javascript.png",
       precioOriginal: "$15.000,00",
-      precioOferta: "$6.000,00",
+      precioOferta: "$5.000,00",
       contenido: `
         <h2>JavaScript </h2>
         <p>Este paquete de cursos te llevará desde los conceptos básicos de JavaScript hasta las últimas tendencias.</p>
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       nombre: " Curso de Programacion en Python",
       imagen: "../images/python.png",
-      precioOriginal: "$15.000,00",
-      precioOferta: "$4.600,00",
+      precioOriginal: "$18.000,00",
+      precioOferta: "$5.600,00",
       contenido: `
         <h2>Programación en Python Curso Avanzado</h2>
         <p>Explora las capacidades de Python para desarrollo web, análisis de datos, inteligencia artificial y más con este completo paquete de cursos.</p>
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: " Curso de Marketing Digital",
       imagen: "../images/MarketingDigital.png",
       precioOriginal: "$7.000,00",
-      precioOferta: "$3.500,00",
+      precioOferta: "$5.500,00",
       contenido: `
       <h2>Marketing Digital</h2>
       <p>Descubre las estrategias más efectivas en marketing digital y maximiza el potencial de tu negocio en línea con este completo paquete de cursos.</p>
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: " Curso de Ciberseguridad Completo",
       imagen: "../images/2.png",
       precioOriginal: "$10.000,00",
-      precioOferta: "$4.000,00",
+      precioOferta: "$3.800,00",
       contenido: `
       <h2>Ciberseguridad</h2>
       <p>Sumérgete en el fascinante mundo de la ciberseguridad y aprende las técnicas más avanzadas para proteger tus sistemas y datos contra amenazas cibernéticas.</p>

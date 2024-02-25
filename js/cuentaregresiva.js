@@ -1,5 +1,5 @@
 // Establecer la fecha límite de la oferta
-const fechaLimiteOferta = new Date(2024, 0, 31, 23, 59, 59);
+const fechaLimiteOferta = new Date(2024, 2, 3, 23, 59, 59);
 
 // Función para actualizar el contador de tiempo restante
 function actualizarContador() {

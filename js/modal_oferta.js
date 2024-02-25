@@ -1,8 +1,8 @@
 // Espera a que el documento HTML esté completamente cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Establece la fecha límite de la oferta al 2 de enero de 2024 a las 23:59:59
-  const fechaLimiteOferta = new Date(2024, 1, 14, 23, 59, 59);
+  // Establece la fecha límite de la oferta al 3 de marzo de 2024 a las 23:59:59
+  const fechaLimiteOferta = new Date(2024, 2, 3, 23, 59, 59);
 
   // Función para actualizar el temporizador que muestra el tiempo restante
   function actualizarTemporizador() {
@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
-    // Actualiza los elementos HTML con los valores calculados
-    document.getElementById("dias").innerHTML = dias;
-    document.getElementById("horas").innerHTML = horas;
-    document.getElementById("minutos").innerHTML = minutos;
-    document.getElementById("segundos").innerHTML = segundos;
+    // Actualiza los elementos HTML con los valores calculados, asegurándote de agregar un cero inicial si es necesario
+    document.getElementById("dias").innerHTML = formatTimeUnit(dias);
+    document.getElementById("horas").innerHTML = formatTimeUnit(horas);
+    document.getElementById("minutos").innerHTML = formatTimeUnit(minutos);
+    document.getElementById("segundos").innerHTML = formatTimeUnit(segundos);
 
     // Cierra el modal si el tiempo restante llega a cero
     if (tiempoRestante <= 0) {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(actualizarTemporizador, 1000);
 
   // Agrega un evento de clic al modal para cerrarlo
-  document.getElementById("ofertaModal").addEventListener("click", function(event) {
+  document.getElementById("ofertaModal").addEventListener("click", function (event) {
     // Si el clic ocurre dentro del contenido del modal, no lo cerramos
     if (!event.target.closest('.modal-content')) return;
     cerrarModal();
@@ -63,5 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Agrega un evento de clic al botón de cerrar modal para llamar a la función cerrarModal
   document.getElementById("closeModal").addEventListener("click", cerrarModal);
-});
 
+  // Función para formatear las unidades de tiempo (asegurándose de agregar un cero inicial si es necesario)
+  function formatTimeUnit(unit) {
+    return unit < 10 ? `0${unit}` : unit;
+  }
+});

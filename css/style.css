@@ -441,7 +441,8 @@ p {
 }
 
 .p-ofer {
-  margin-bottom: 0 !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
 }
 
@@ -449,7 +450,7 @@ p {
   text-align: center;
   background-color: red;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 0 5px;
 }
 
