@@ -1,9 +1,8 @@
-// Espera a que el documento HTML esté completamente cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Establecer la fecha límite de la oferta para 7 días a partir de hoy
+  // Establecer la fecha límite de la oferta para 10 días a partir de hoy
   const fechaLimiteOferta = new Date();
-  fechaLimiteOferta.setDate(fechaLimiteOferta.getDate() + 7);
+  fechaLimiteOferta.setDate(fechaLimiteOferta.getDate() + 10); // Cambio de 7 a 10 días
   fechaLimiteOferta.setHours(23, 59, 59, 999);
 
   // Función para actualizar el contador de tiempo restante
