@@ -7,14 +7,20 @@
 /* Index | Inicio */
 /* body */
 body {
-  font-family: "Merriweather", serif;
+  font-family: "Mooli", sans-serif;
   background-color: #ececec;
 }
+.mooli-regular {
+  font-family: "Mooli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Img de portada */
 .img-portada {
-  background: linear-gradient(to right, #d8d1075a, #64059b5a),
-    url(../images/26c5c9_3c3553bdf0764d868fc8899f16d040a5~mv2.webp);
+  background: linear-gradient(to right, #d8d1073c, #64059b75),
+    url(../images/oficina-ip.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -39,12 +45,11 @@ body {
 
 .texto {
   text-shadow: 4px 2px 3px rgb(0, 0, 0);
-  font-weight: 900;
+  font-weight: 600;
   color: #dbdbdb;
   font-size: 3rem;
   padding-top: 140px;
-  /* -webkit-box-reflect:below 1px linear-grandiet(transparent, #0005);
-  box-shadow: 0 0 5px; */
+  filter: drop-shadow( 0 0 1px #9812e6);
 }
 
 .p {
@@ -96,20 +101,23 @@ strong {
 
 
 .navbar-toggler-icon {
-  background-image: url("https://img.icons8.com/ios-filled/50/FFFFFF/menu--v1.png");
+  background-image: url("https://img.icons8.com/glyph-neue/64/FFFFFF/source-code.png");
   width: 40px;
   height: 40px;
+  filter: drop-shadow( 0 0 2.5px #9812e6);
 }
-
+.navbar-nav .dropdown-menu{
+  filter: drop-shadow( 0 0 2.5px #9812e6);
+}
 .navbar-nav .nav-link:hover {
-  background: linear-gradient(to right, #f1ea07, #9812e6);
+  background: #9812e6;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background: linear-gradient(to right, #d8d107, #64059b);
+  background: #9812e6;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -161,10 +169,8 @@ strong {
   font-size: 0.8em;
   color: #777;
   margin-top: 30px;
-  background-image: url(https://i.gifer.com/fxy1.gif);
   background-size: cover;
   background-clip: text;
-  color: transparent;
 }
 
 
@@ -1078,6 +1084,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  filter: drop-shadow( 0 0 2.5px #9812e6);
 }
 .playy{
   display: flex;
