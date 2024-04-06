@@ -10,6 +10,7 @@ body {
   font-family: "Mooli", sans-serif;
   background-color: #ececec;
 }
+
 .mooli-regular {
   font-family: "Mooli", sans-serif;
   font-weight: 400;
@@ -49,7 +50,7 @@ body {
   color: #dbdbdb;
   font-size: 3rem;
   padding-top: 140px;
-  filter: drop-shadow( 0 0 1px #9812e6);
+  filter: drop-shadow(0 0 1px #9812e6);
 }
 
 .p {
@@ -104,11 +105,13 @@ strong {
   background-image: url("https://img.icons8.com/glyph-neue/64/FFFFFF/source-code.png");
   width: 40px;
   height: 40px;
-  filter: drop-shadow( 0 0 2.5px #9812e6);
+  filter: drop-shadow(0 0 2.5px #9812e6);
 }
-.navbar-nav .dropdown-menu{
-  filter: drop-shadow( 0 0 2.5px #9812e6);
+
+.navbar-nav .dropdown-menu {
+  filter: drop-shadow(0 0 2.5px #9812e6);
 }
+
 .navbar-nav .nav-link:hover {
   background: #9812e6;
   -webkit-background-clip: text;
@@ -861,9 +864,11 @@ p {
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
+
 .btn-vaciar-carritoo:hover {
   background-color: #cc4c3e;
 }
+
 /*********************************** Estilos de modal de cursos **************************/
 .modal {
   display: none;
@@ -1084,15 +1089,17 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  filter: drop-shadow( 0 0 2.5px #9812e6);
+  filter: drop-shadow(0 0 2.5px #9812e6);
 }
-.playy{
+
+.playy {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: -50px;
+  margin-top: 20%;
 }
+
 .custom-form {
 
   display: flex;
@@ -1123,6 +1130,7 @@ textarea {
   border-radius: 10px;
   box-sizing: border-box;
 }
+
 input[type="number"],
 textarea {
   width: 100%;
@@ -1132,6 +1140,7 @@ textarea {
   border-radius: 10px;
   box-sizing: border-box;
 }
+
 input[type="email"],
 textarea {
   width: 100%;
