@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // Establecer la fecha límite de la oferta para 10 días a partir de hoy
   const fechaLimiteOferta = new Date();
   fechaLimiteOferta.setDate(fechaLimiteOferta.getDate() + 10); // Cambio de 7 a 10 días

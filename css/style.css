@@ -17,7 +17,6 @@ body {
   font-style: normal;
 }
 
-
 /* Img de portada */
 .img-portada {
   background: linear-gradient(to right, #d8d1073c, #64059b75),
@@ -101,7 +100,6 @@ strong {
   color: #f3f3f3;
 }
 
-
 .navbar-toggler-icon {
   background-image: url("https://img.icons8.com/glyph-neue/64/FFFFFF/source-code.png");
   width: 40px;
@@ -176,7 +174,6 @@ strong {
   background-size: cover;
   background-clip: text;
 }
-
 
 */ .img:hover,
 svg:hover {
@@ -285,7 +282,8 @@ p {
   margin: 30px;
   padding: 15px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -443,9 +441,11 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(0deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
   height: auto;
   margin: 0;
 }
@@ -665,7 +665,6 @@ p {
 }
 
 @keyframes rubberBand {
-
   0%,
   100% {
     transform: scale(1);
@@ -700,7 +699,8 @@ p {
 .curso-card {
   position: relative;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 8px;
   width: 300px;
   margin: 10px;
@@ -713,7 +713,8 @@ p {
 
 .bg-image {
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 10px;
 }
 
@@ -1001,8 +1002,6 @@ p {
   background-color: #bc3020;
 }
 
-
-
 .conteneur-unique {
   text-align: center;
   padding: 20px;
@@ -1048,7 +1047,6 @@ p {
 
 #bouton-panier:hover {
   filter: brightness(120%);
-
 }
 
 .carr-mer {
@@ -1068,7 +1066,6 @@ p {
 }
 
 .custom-form {
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1093,7 +1090,7 @@ textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid #9812e6;
+  border: 1px solid #9812e652;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -1103,7 +1100,7 @@ textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid #9812e6;
+  border: 1px solid #9812e652;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -1113,7 +1110,7 @@ textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid #9812e6;
+  border: 1px solid #9812e652;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -1126,7 +1123,8 @@ textarea {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 #button:hover {
