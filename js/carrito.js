@@ -1,7 +1,8 @@
 // Espera a que el documento HTML esté completamente cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", function () {
   // Array de objetos que contiene la información de diferentes cursos
-  let cursos = [{
+  let cursos = [
+    {
       nombre: "Cursos completo de Trading desde 0",
       imagen: "../images/Cursotrading.png",
       precioOriginal: "$9.000,00",
@@ -130,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </ul>
       
       `,
-    }
+    },
   ];
 
   // Elementos del DOM
@@ -282,24 +283,22 @@ document.addEventListener("DOMContentLoaded", function () {
     guardarCarritoEnStorage();
   }
 
-// Función para actualizar el total del carrito
-function actualizarTotal() {
-  const total = carrito.reduce(
-    (acc, item) => acc + item.precio * item.cantidad,
-    0
-  );
-  totalCarrito.textContent = `Total: ${formatoMoneda(total)}`;
-}
-// Función para dar formato al número como moneda argentina (ARS)
-function formatoMoneda(monto) {
-  return new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 3,
-  }).format(monto);
-}
-
-
+  // Función para actualizar el total del carrito
+  function actualizarTotal() {
+    const total = carrito.reduce(
+      (acc, item) => acc + item.precio * item.cantidad,
+      0
+    );
+    totalCarrito.textContent = `Total: ${formatoMoneda(total)}`;
+  }
+  // Función para dar formato al número como moneda argentina (ARS)
+  function formatoMoneda(monto) {
+    return new Intl.NumberFormat("es-AR", {
+      style: "currency",
+      currency: "ARS",
+      minimumFractionDigits: 3,
+    }).format(monto);
+  }
 
   // Función para guardar el carrito en el almacenamiento local
   function guardarCarritoEnStorage() {
@@ -363,60 +362,60 @@ function formatoMoneda(monto) {
           }
         });
     }
-
   }
 
   // Agrega un evento de clic al botón "Finalizar Compra"
-  document.querySelector("#finalizar-compra").addEventListener("click", function () {
-    // Verifica si el carrito contiene elementos
-    if (carrito.length > 0) {
-      // Si hay elementos en el carrito, muestra el SweetAlert para finalizar la compra
-      finalizarCompra();
-    } else {
-      // Si el carrito está vacío, muestra un mensaje al usuario
-      Swal.fire({
-        title: "Carrito vacío",
-        text: "Agrega cursos a tu carrito antes de finalizar la compra.",
-        icon: "info",
-      });
-    }
-  });
-
-
- // Función para finalizar la compra
-function finalizarCompra() {
-  const swalWithBootstrapButtons = Swal.mixin({
-    customClass: {
-      confirmButton: "btn btn-success",
-      cancelButton: "btn btn-danger",
-    },
-    buttonsStyling: false,
-  });
-
-  swalWithBootstrapButtons
-    .fire({
-      title: "¿Finalizar compra?",
-      icon: "question",
-      showCancelButton: true,
-      confirmButtonText: "Sí",
-      cancelButtonText: "No",
-      reverseButtons: true,
-    })
-    .then((result) => {
-      if (result.isConfirmed) {
-        // Lógica para finalizar la compra
-
-        // Limpiar el carrito después de la compra
-        vaciarCarrito();
-
-        swalWithBootstrapButtons.fire({
-          title: "Compra exitosa",
-          text: "¡Gracias por tu compra!",
-          icon: "success",
+  document
+    .querySelector("#finalizar-compra")
+    .addEventListener("click", function () {
+      // Verifica si el carrito contiene elementos
+      if (carrito.length > 0) {
+        // Si hay elementos en el carrito, muestra el SweetAlert para finalizar la compra
+        finalizarCompra();
+      } else {
+        // Si el carrito está vacío, muestra un mensaje al usuario
+        Swal.fire({
+          title: "Carrito vacío",
+          text: "Agrega cursos a tu carrito antes de finalizar la compra.",
+          icon: "info",
         });
       }
     });
-}
+
+  // Función para finalizar la compra
+  function finalizarCompra() {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger",
+      },
+      buttonsStyling: false,
+    });
+
+    swalWithBootstrapButtons
+      .fire({
+        title: "¿Finalizar compra?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sí",
+        cancelButtonText: "No",
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          // Lógica para finalizar la compra
+
+          // Limpiar el carrito después de la compra
+          vaciarCarrito();
+
+          swalWithBootstrapButtons.fire({
+            title: "Compra exitosa",
+            text: "¡Gracias por tu compra!",
+            icon: "success",
+          });
+        }
+      });
+  }
 
   // Agrega un evento de clic al botón de vaciar carrito para confirmar la acción
   document
@@ -432,7 +431,6 @@ function finalizarCompra() {
       cerrarModal();
     }
   });
-
 
   // Función para mostrar el modal con un contenido específico
   function mostrarModal(contenido) {
@@ -456,5 +454,4 @@ function finalizarCompra() {
   // Renderiza la lista de cursos, carga el carrito desde el almacenamiento local
   renderizarCursos();
   cargarCarritoDesdeStorage();
-
 });

@@ -19,7 +19,7 @@ body {
 
 /* Img de portada */
 .img-portada {
-  background: linear-gradient(to right, #d8d1073c, #64059b75),
+  background: linear-gradient(to right, #d8d1071a, #64059b1f),
     url(../images/oficina-ip.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -265,63 +265,9 @@ p {
   text-align: center;
 }
 
-/* Estilos para la sección de testimonios */
-/* Estilos generales para la sección de testimonios */
-.testimonialls-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px auto;
-  flex-direction: row;
-}
-
-/* Estilos para cada tarjeta de testimonio */
-.testimoniall {
-  background-color: #fff;
-  max-width: 330px;
-  margin: 30px;
-  padding: 15px;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  transition: transform 0.3s ease-in-out;
-}
-
-.testimoniall:hover {
-  transform: scale(1.05);
-}
-
-.iconos-nav {
-  transition: transform 0.4s ease-in-out;
-}
-
-.iconos-nav:hover {
-  transform: scale(1.07);
-}
-
-/* Estilos para la imagen dentro de la tarjeta */
-.testimoniall img {
-  width: 100%;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-/* Estilos para el texto del testimonio */
-.testimoniall-text {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-/* Estilos para el autor del testimonio */
-.testimoniall-author {
-  font-style: italic;
-  font-size: 12px;
-  color: #555;
-}
 
 /* Estilos para la transición de la tarjeta al hacer hover */
-.testimoniall:hover {
+/* .testimoniall:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -380,7 +326,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 /******************************* OFERTA EN TIENDA ********************/
 .contenedor-anuncio {
@@ -1130,3 +1076,52 @@ textarea {
 #button:hover {
   background-color: #bc3020;
 }
+
+
+.message-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.message-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.message-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.message-container ul li {
+  margin-bottom: 10px;
+}
+
+.message-container ul li::before {
+  content: "🔹";
+  margin-right: 5px;
+}
+
+.message-container ul li p {
+  margin: 5px 0 5px 20px;
+}
+
+.message-container p {
+  margin: 20px 0 0;
+}
+
+.message-container .thanks {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.message-container .signature {
+  margin-top: 20px;
+}
+
