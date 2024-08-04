@@ -20,7 +20,7 @@ body {
 /* Img de portada */
 .img-portada {
   background: linear-gradient(to right, #d8d1071a, #64059b1f),
-    url(../images/oficina-ip.jpg);
+    url(../images/video_inicio.gif);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -45,7 +45,7 @@ body {
 }
 
 .texto {
-  text-shadow: 4px 2px 3px rgb(0, 0, 0);
+  text-shadow: 4px 2px 3px #043d68;
   font-weight: 600;
   color: #dbdbdb;
   font-size: 3rem;
@@ -54,10 +54,10 @@ body {
 }
 
 .p {
-  text-shadow: 2px 2px 3px #dbdbdb;
+  text-shadow: 2px 2px 3px #0a0a0a;
   margin-top: 30px;
   font-weight: 700;
-  color: #000;
+  color: white;
   font-size: 1.1rem;
 }
 
@@ -101,10 +101,9 @@ strong {
 }
 
 .navbar-toggler-icon {
-  background-image: url("https://img.icons8.com/glyph-neue/64/FFFFFF/source-code.png");
+  background-image: url("https://img.icons8.com/3d-fluency/94/menu.png");
   width: 40px;
   height: 40px;
-  filter: drop-shadow(0 0 2.5px #9812e6);
 }
 
 .navbar-nav .dropdown-menu {
